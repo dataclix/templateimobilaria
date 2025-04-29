@@ -155,14 +155,14 @@ const Card: React.FC<ImovelResumo> = ({
             onMouseLeave={() => setIsHovered(false)}
             style={{
                 transform: isHovered ? 'translateY(-5px)' : 'translateY(0)',
-                boxShadow: isHovered ? '0 10px 25px rgba(0,185,55,0.15)' : '0 4px 6px rgba(0,0,0,0.05)',
-                border: isHovered ? '1px solid #00b937' : '1px solid #e5e7eb'
+                boxShadow: isHovered ? `0 10px 25px rgba(${isHovered ? '230,126,34,0.15' : '0,0,0,0.05'})` : '0 4px 6px rgba(0,0,0,0.05)',
+                border: isHovered ? '1px solid #E67E22' : '1px solid #e5e7eb'
             }}
         >
             <div 
                 className="absolute inset-0 z-0 transition-opacity duration-300"
                 style={{
-                    background: isHovered ? 'linear-gradient(90deg, #2fa74e 0%, #5cc6a2 100%)' : 'none',
+                    background: isHovered ? 'linear-gradient(90deg, #2C3E50 0%, #34495E 100%)' : 'none',
                     opacity: isHovered ? 0.85 : 0,
                     pointerEvents: 'none'
                 }}
@@ -179,7 +179,7 @@ const Card: React.FC<ImovelResumo> = ({
                     <button
                         ref={refs.setReference}
                         onClick={toggleMenu}
-                        className="absolute top-2 right-2 z-10 p-2 rounded-full bg-white bg-opacity-80 text-gray-700 hover:bg-opacity-100 transition-colors focus:outline-none focus:ring-2 focus:ring-verde"
+                        className="absolute top-2 right-2 z-10 p-2 rounded-full bg-white bg-opacity-80 text-gray-700 hover:bg-opacity-100 transition-colors focus:outline-none focus:ring-2 focus:ring-re-accent"
                         aria-label="Compartilhar imóvel"
                     >
                         <FiShare size={16} />
@@ -197,12 +197,10 @@ const Card: React.FC<ImovelResumo> = ({
                                 </span>
                             )}
                             {modalidade?.toUpperCase() === 'ALUGUEL' ? (
-                                <span className="px-2 py-1 rounded-md text-xs font-bold text-white shadow-sm"
-                                    style={{ backgroundColor: '#2563eb' }}
+                                <span className="px-2 py-1 rounded-md text-xs font-bold text-white shadow-sm bg-re-info"
                                 >ALUGAR</span>
                             ) : modalidade?.toUpperCase() === 'VENDA' ? (
-                                <span className="px-2 py-1 rounded-md text-xs font-bold text-white shadow-sm"
-                                    style={{ backgroundColor: '#00b937' }}
+                                <span className="px-2 py-1 rounded-md text-xs font-bold text-white shadow-sm bg-re-accent"
                                 >VENDA</span>
                             ) : null}
                         </div>
@@ -214,7 +212,7 @@ const Card: React.FC<ImovelResumo> = ({
                 {/* Valor do imóvel destacado */}
                 <div className="flex items-center justify-between mb-2">
                     <span
-                        className={`text-xl font-bold ${isHovered ? 'text-white' : 'text-[#00b937]'}`}
+                        className={`text-xl font-bold ${isHovered ? 'text-white' : 'text-re-accent'}`}
                         style={{ letterSpacing: '-0.5px' }}
                     >
                         {formatPrice()}

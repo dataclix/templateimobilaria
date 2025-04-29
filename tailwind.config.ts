@@ -25,25 +25,25 @@ const config: Config = {
     },
     extend: {
       colors: {
-        // Paleta RE Imóveis
-        're-base': '#2D3F42', // Grafite Escuro / Azul Petróleo
-        're-accent': '#00D54B', // Verde Vibrante
-        're-bg': '#FFFFFF', // Branco
-        're-bg-alt': '#F4F6F6', // Cinza Gelo
-        're-text-main': '#2D3F42', // Grafite Escuro / Azul Petróleo
-        're-text-secondary': '#5A6C6F', // Cinza Esverdeado Médio
-        're-text-tertiary': '#A0AEB0', // Cinza Esverdeado Claro
-        're-text-invert': '#FFFFFF', // Branco para textos invertidos
-        're-success': '#27AE60', // Verde Sucesso
-        're-warning': '#F2C94C', // Amarelo Aviso
-        're-error': '#EB5757', // Vermelho Erro
-        're-info': '#828282', // Cinza Neutro Info
+        // Paleta Template Imobiliário
+        're-base': '#2C3E50', // Azul Escuro Sóbrio (era Grafite Escuro / Azul Petróleo)
+        're-accent': '#E67E22', // Laranja Queimado Suave (era Verde Vibrante)
+        're-bg': '#FFFFFF', // Branco Puro (mantido)
+        're-bg-alt': '#F8F9FA', // Cinza Muito Claro (era Cinza Gelo)
+        're-text-main': '#34495E', // Cinza Azulado Escuro (era Grafite Escuro / Azul Petróleo)
+        're-text-secondary': '#7F8C8D', // Cinza Médio Neutro (era Cinza Esverdeado Médio)
+        're-text-tertiary': '#B0BEC5', // Cinza Claro Azulado (era Cinza Esverdeado Claro)
+        're-text-invert': '#FFFFFF', // Branco para textos invertidos (mantido)
+        're-success': '#28A745', // Verde Sucesso (atualizado)
+        're-warning': '#FFC107', // Amarelo Aviso (atualizado)
+        're-error': '#DC3545', // Vermelho Erro (atualizado)
+        're-info': '#6C757D', // Cinza Informativo (atualizado)
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
         'home': "url('/images/capa.webp')",
-        'dourado': 'linear-gradient(to right, #00b937 0%, #00b937 80%, #00b937 100%)',
+        'dourado': 'linear-gradient(to right, #E67E22 0%, #E67E22 80%, #E67E22 100%)', // Atualizado para usar a cor de destaque laranja
       },
       fontFamily: {
         montserrat: ['Montserrat', 'sans-serif'],

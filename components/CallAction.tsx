@@ -9,7 +9,7 @@ type CallActionProps = {
 const CallAction: React.FC<CallActionProps> = () => {
   const [phone, setPhone] = useState('');
   const [message, setMessage] = useState('');
-  const companyWhatsappNumber = "5532999428800"; // WhatsApp oficial RE Imóveis
+  const companyWhatsappNumber = "5500000000000"; // WhatsApp da Imobiliária
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -42,12 +42,12 @@ const CallAction: React.FC<CallActionProps> = () => {
           style={{ objectFit: 'cover', width: '100%', height: '100%' }}
         />
         {/* Overlay reforçado para contraste */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[#2D3F42]/95 to-[#1b5e20]/80 z-10"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-re-base/95 to-re-text-main/80 z-10"></div>
       </div>
 
       {/* Decorative elements */}
       <motion.div 
-        className="absolute top-[10%] right-[10%] w-48 h-48 rounded-full bg-[#00D54B]/20 blur-3xl"
+        className="absolute top-[10%] right-[10%] w-48 h-48 rounded-full bg-re-accent/20 blur-3xl"
         animate={{ 
           scale: [1, 1.1, 1],
           opacity: [0.2, 0.15, 0.2],
@@ -90,19 +90,19 @@ const CallAction: React.FC<CallActionProps> = () => {
                   <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center mr-4">
                     <FaMapMarkerAlt className="text-lg" />
                   </div>
-                  <p>Avenida Tiradentes, 475, Centro, São João del Rei - MG, CEP: 36307-330</p>
+                  <p>Endereço da Imobiliária, 100, Sua Cidade - UF, 00000-000</p>
                 </div>
                 <div className="flex items-center">
                   <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center mr-4">
                     <FaPhone className="text-lg" />
                   </div>
-                  <p>(32) 3371-8800</p>
+                  <p>+55 (00) 0000-0000</p>
                 </div>
                 <div className="flex items-center">
                   <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center mr-4">
                     <FaEnvelope className="text-lg" />
                   </div>
-                  <p>contato@reimoveis.com</p>
+                  <p>contato@imobiliaria-template.com.br</p>
                 </div>
               </div>
               <div className="pt-4">
@@ -118,7 +118,7 @@ const CallAction: React.FC<CallActionProps> = () => {
                     <FaFacebookF size={18} />
                   </a>
                   <a
-                    href="https://www.instagram.com/refinanceira/"
+                    href="#"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition-colors"
@@ -137,16 +137,16 @@ const CallAction: React.FC<CallActionProps> = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="bg-white rounded-2xl shadow-2xl p-8 w-full max-w-md mx-auto md:mx-0 md:ml-auto border border-[#00D54B]/30"
+            className="bg-white rounded-2xl shadow-2xl p-8 w-full max-w-md mx-auto md:mx-0 md:ml-auto border border-re-accent/30"
             role="form"
             aria-label="Formulário de contato via WhatsApp"
           >
-            <h2 className="text-2xl md:text-3xl font-bold text-[#2D3F42] mb-6 text-center font-montserrat">
+            <h2 className="text-2xl md:text-3xl font-bold text-re-base mb-6 text-center font-montserrat">
               Alguma pergunta?
             </h2>
             <form onSubmit={handleSubmit} className="space-y-5">
               <div>
-                <label htmlFor="phone" className="block text-sm font-medium text-[#2D3F42] mb-1 font-poppins">
+                <label htmlFor="phone" className="block text-sm font-medium text-re-text-main mb-1 font-poppins">
                   Seu telefone
                 </label>
                 <input
@@ -157,12 +157,12 @@ const CallAction: React.FC<CallActionProps> = () => {
                   onChange={(e) => setPhone(e.target.value)}
                   required
                   placeholder="Digite seu telefone aqui..."
-                  className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#00D54B] focus:border-transparent transition-colors font-poppins"
+                  className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-re-accent focus:border-transparent transition-colors font-poppins"
                   aria-label="Telefone para contato"
                 />
               </div>
               <div>
-                <label htmlFor="message" className="block text-sm font-medium text-[#2D3F42] mb-1 font-poppins">
+                <label htmlFor="message" className="block text-sm font-medium text-re-text-main mb-1 font-poppins">
                   Sua pergunta
                 </label>
                 <textarea
@@ -173,13 +173,13 @@ const CallAction: React.FC<CallActionProps> = () => {
                   onChange={(e) => setMessage(e.target.value)}
                   required
                   placeholder="Sua pergunta..."
-                  className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#00D54B] focus:border-transparent transition-colors resize-none font-poppins"
+                  className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-re-accent focus:border-transparent transition-colors resize-none font-poppins"
                   aria-label="Mensagem de contato"
                 ></textarea>
               </div>
               <motion.button
                 type="submit"
-                className="w-full bg-[#00D54B] hover:bg-[#00993a] text-white font-semibold py-3 px-4 rounded-lg transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-[#00D54B] focus:ring-offset-2 flex items-center justify-center font-poppins shadow"
+                className="w-full bg-re-accent hover:bg-re-base text-white font-semibold py-3 px-4 rounded-lg transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-re-accent focus:ring-offset-2 flex items-center justify-center font-poppins shadow"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
               >

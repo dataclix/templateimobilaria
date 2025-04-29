@@ -116,7 +116,7 @@ const Footer: React.FC = () => {
                             <div className="flex flex-col w-full items-center md:items-start">
                                 <Link href="/" className="mb-5 inline-block">
                                    <Image
-                                        src="/images/reimoveis.webp"
+                                        src="/images/logo.webp"
                                         alt="Logo da Imobiliária"
                                         width={130}
                                         height={70}
@@ -125,7 +125,7 @@ const Footer: React.FC = () => {
                                     />
                                 </Link>
                                 <p className="text-sm text-re-text-tertiary mb-6 leading-relaxed font-poppins text-center md:text-left">
-                                    Conectamos pessoas e sonhos através dos melhores imóveis. Atuamos com dedicação e profissionalismo para oferecer a melhor experiência com a RE Imóveis.
+                                    Conectamos pessoas e sonhos através dos melhores imóveis. Atuamos com dedicação e profissionalismo para oferecer a melhor experiência imobiliária.
                                 </p>
                                 <div className="flex space-x-3 mb-6 justify-center md:justify-start w-full">
                                     <a
@@ -138,7 +138,7 @@ const Footer: React.FC = () => {
                                         <FaFacebookF size={16} />
                                     </a>
                                     <a
-                                        href="https://www.instagram.com/refinanceira/"
+                                        href="#"
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         aria-label="Instagram"
@@ -232,32 +232,41 @@ const Footer: React.FC = () => {
                                     Contato
                                 </Typography>
                                 <ul className="space-y-4 flex flex-col items-center md:items-start">
-                                    <li className="w-full flex justify-center md:justify-start">
-                                        <span className="flex items-center gap-3 text-re-accent">
-                                            <FaMapMarkerAlt />
-                                            <span className="text-re-text-invert text-base text-center md:text-left">
-                                                Avenida Tiradentes, 475 - Centro,<br />
-                                                São João del Rei - MG, CEP: 36307-330
-                                            </span>
+                                    <li className="w-full flex items-start justify-center md:justify-start">
+                                        <FaMapMarkerAlt className="text-re-accent mr-2 min-w-[16px] mt-1" size={16} />
+                                        <span className="text-sm text-re-text-tertiary leading-tight">
+                                            Endereço da Imobiliária, 100<br />
+                                            Sua Cidade - UF, 00000-000
                                         </span>
                                     </li>
-                                    <li className="w-full flex justify-center md:justify-start">
-                                        <span className="flex items-center gap-3 text-re-accent">
-                                            <FaPhone />
-                                            <span className="text-re-text-invert text-base">(32) 3371-8800</span>
-                                        </span>
+                                    <li className="w-full flex items-center justify-center md:justify-start">
+                                        <FaPhone className="text-re-accent mr-2" size={14} />
+                                        <a 
+                                            href="tel:+5500000000000" 
+                                            className="text-sm text-re-text-tertiary hover:text-re-accent transition-colors duration-300"
+                                        >
+                                            +55 (00) 0000-0000
+                                        </a>
                                     </li>
-                                    <li className="w-full flex justify-center md:justify-start">
-                                        <span className="flex items-center gap-3 text-re-accent">
-                                            <MdEmail />
-                                            <span className="text-re-text-invert text-base">contato@reimoveis.com</span>
-                                        </span>
+                                    <li className="w-full flex items-center justify-center md:justify-start">
+                                        <FaWhatsapp className="text-re-accent mr-2" size={16} />
+                                        <a 
+                                            href="https://wa.me/5500000000000" 
+                                            target="_blank" 
+                                            rel="noopener noreferrer" 
+                                            className="text-sm text-re-text-tertiary hover:text-re-accent transition-colors duration-300"
+                                        >
+                                            +55 (00) 00000-0000
+                                        </a>
                                     </li>
-                                    <li className="w-full flex justify-center md:justify-start">
-                                        <span className="flex items-center gap-3 text-re-accent">
-                                            <FaWhatsapp />
-                                            <span className="text-re-text-invert text-base">(32) 9 9942-8800</span>
-                                        </span>
+                                    <li className="w-full flex items-center justify-center md:justify-start">
+                                        <MdEmail className="text-re-accent mr-2" size={16} />
+                                        <a 
+                                            href="mailto:contato@imobiliaria-template.com.br" 
+                                            className="text-sm text-re-text-tertiary hover:text-re-accent transition-colors duration-300"
+                                        >
+                                            contato@imobiliaria-template.com.br
+                                        </a>
                                     </li>
                                 </ul>
                             </div>
@@ -312,6 +321,15 @@ const Footer: React.FC = () => {
                     <Forms onClose={handleModalClose} />
                 </Suspense>
             </Dialog>
+
+            {/* Barra de Copyright */}
+            <div className="bg-re-base border-t border-re-text-tertiary/20 py-4">
+                <div className="container mx-auto px-4 lg:px-8 text-center">
+                    <p className="text-xs text-re-text-tertiary font-poppins">
+                        &copy; {currentYear} Imobiliária | Todos os direitos reservados | Desenvolvido por <a href="#" target="_blank" rel="noopener noreferrer" className="text-re-accent hover:text-re-text-invert transition-colors">Nome da Sua Empresa</a>
+                    </p>
+                </div>
+            </div>
         </>
     );
 };

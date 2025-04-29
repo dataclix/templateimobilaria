@@ -28,11 +28,11 @@ interface CorretorCardProps {
 }
 
 const CorretorCard: React.FC<CorretorCardProps> = ({ corretor, index }) => {
-  // Nova função que usa o número fixo
+  // Nova função que usa um número placeholder
   const handleWhatsapp = () => {
-    const numeroFixo = '32998650909';
+    const numeroGenerico = corretor.celular || '00000000000';
     const mensagem = encodeURIComponent('Olá! Gostaria de falar sobre imóveis.');
-    const shareUrl = `https://api.whatsapp.com/send?phone=55${numeroFixo}&text=${mensagem}`;
+    const shareUrl = `https://api.whatsapp.com/send?phone=55${numeroGenerico}&text=${mensagem}`;
     window.open(shareUrl, '_blank');
   };
 
@@ -84,7 +84,7 @@ const CorretorCard: React.FC<CorretorCardProps> = ({ corretor, index }) => {
             left: 0,
             width: '100%',
             height: '6px',
-            background: 'linear-gradient(90deg, #00D54B 0%, #2D3F42 100%)',
+            background: 'linear-gradient(90deg, #E67E22 0%, #2C3E50 100%)',
             borderTopLeftRadius: '16px',
             borderTopRightRadius: '16px'
           }
@@ -98,8 +98,8 @@ const CorretorCard: React.FC<CorretorCardProps> = ({ corretor, index }) => {
               width: 110,
               height: 110,
               margin: '0 auto',
-              border: `3px solid #00D54B`,
-              boxShadow: '0 4px 12px rgba(0,213,75,0.18)',
+              border: `3px solid #E67E22`,
+              boxShadow: '0 4px 12px rgba(230,126,34,0.18)',
             }}
           />
           <motion.div
@@ -116,7 +116,7 @@ const CorretorCard: React.FC<CorretorCardProps> = ({ corretor, index }) => {
               width: '26px',
               height: '26px',
               borderRadius: '50%',
-              backgroundColor: '#00D54B',
+              backgroundColor: '#E67E22',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
@@ -142,7 +142,7 @@ const CorretorCard: React.FC<CorretorCardProps> = ({ corretor, index }) => {
             variant="h6"
             sx={{ 
               fontWeight: '600', 
-              color: '#2D3F42', 
+              color: '#2C3E50', 
               mb: 0.5, 
               fontFamily: 'Montserrat, sans-serif' 
             }}
@@ -152,7 +152,7 @@ const CorretorCard: React.FC<CorretorCardProps> = ({ corretor, index }) => {
           <Typography
             variant="body2"
             sx={{ 
-              color: '#5A6C6F', 
+              color: '#34495E', 
               fontWeight: '500', 
               mb: 0.5, 
               fontFamily: 'Poppins, sans-serif' 
@@ -163,7 +163,7 @@ const CorretorCard: React.FC<CorretorCardProps> = ({ corretor, index }) => {
           <Typography
             variant="caption"
             sx={{ 
-              color: '#5A6C6F', 
+              color: '#7F8C8D', 
               display: 'block', 
               mb: 2, 
               height: '20px', 
@@ -180,7 +180,7 @@ const CorretorCard: React.FC<CorretorCardProps> = ({ corretor, index }) => {
             startIcon={<FaWhatsapp />}
             sx={{
               borderRadius: '8px',
-              bgcolor: '#00D54B',
+              bgcolor: '#E67E22',
               color: 'white',
               fontWeight: '500',
               textTransform: 'none',
@@ -188,8 +188,8 @@ const CorretorCard: React.FC<CorretorCardProps> = ({ corretor, index }) => {
               py: 1,
               boxShadow: 'none',
               '&:hover': {
-                bgcolor: '#00D54B',
-                boxShadow: '0 4px 10px rgba(0,213,75,0.3)',
+                bgcolor: '#2C3E50',
+                boxShadow: '0 4px 10px rgba(230,126,34,0.3)',
               },
             }}
           >
@@ -240,7 +240,7 @@ const Corretores: React.FC = () => {
       sx={{
         py: { xs: 8, md: 12 },
         px: { xs: 2, sm: 4 },
-        bgcolor: '#F4F6F6',
+        bgcolor: '#F8F9FA',
         position: 'relative',
         overflow: 'hidden',
       }}
@@ -292,7 +292,7 @@ const Corretores: React.FC = () => {
             sx={{
               fontSize: '0.875rem',
               fontWeight: 600,
-              color: '#00D54B',
+              color: '#E67E22',
               letterSpacing: '1.2px',
               display: 'block',
               mb: 1,
@@ -305,7 +305,7 @@ const Corretores: React.FC = () => {
             variant="h4"
             sx={{
               fontWeight: 'bold',
-              color: '#2D3F42',
+              color: '#2C3E50',
               mb: 2,
               fontFamily: 'Montserrat, sans-serif'
             }}
@@ -315,7 +315,7 @@ const Corretores: React.FC = () => {
           <Typography
             variant="body1"
             sx={{
-              color: '#5A6C6F',
+              color: '#34495E',
               maxWidth: '700px',
               fontSize: '1.125rem',
               margin: '0 auto',
@@ -365,7 +365,7 @@ const Corretores: React.FC = () => {
 
 <style jsx global>{`
   .swiper-button-next, .swiper-button-prev {
-    color: #2D3F42cc;
+    color: #2C3E50cc;
     background: #fff;
     border-radius: 50%;
     width: 44px;

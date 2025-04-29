@@ -49,7 +49,7 @@ const Banner: React.FC = () => {
       </div>
 
       {/* Gradient Overlay (z-10, pointer-events-none) */}
-      <div className="absolute inset-x-0 top-16  bottom-0 bg-gradient-to-b from-[#2D3F42]/70 via-[#2D3F42]/50 to-[#2D3F42]/70 z-10 pointer-events-none transition-all duration-300" />
+      <div className="absolute inset-x-0 top-16 bottom-0 bg-gradient-to-b from-re-base/70 via-re-base/50 to-re-base/70 z-10 pointer-events-none transition-all duration-300" />
 
       {/* Centering Container (z-20, pointer-events-none) */}
       <div className="absolute inset-0 flex items-center justify-center p-4 z-20 pointer-events-none">
@@ -58,7 +58,7 @@ const Banner: React.FC = () => {
           <div className="absolute left-1/2 -translate-x-1/2 w-full flex justify-center z-30 top-20 md:top-40">
             <div className="max-w-2xl text-center">
               <h1 className="text-2xl md:text-3xl font-bold text-white drop-shadow-lg mb-2 md:mb-4">Encontre o imóvel perfeito para sua vida!</h1>
-              <p className="text-white text-base md:text-lg drop-shadow-md">A RE Imóveis conecta você ao seu novo lar.</p>
+              <p className="text-white text-base md:text-lg drop-shadow-md">Conectamos você ao seu novo lar.</p>
             </div>
           </div>
           {/* Motion Div & Form Wrapper (pointer-events-auto) */}
@@ -80,7 +80,7 @@ const Banner: React.FC = () => {
           z-index: 50 !important; 
           color: white !important; 
           --swiper-navigation-size: 28px;
-          background-color: #2D3F42cc; 
+          background-color: rgba(44, 62, 80, 0.8); 
           border-radius: 50%; 
           width: 44px; 
           height: 44px;
@@ -92,7 +92,7 @@ const Banner: React.FC = () => {
           margin: 0 18px !important; /* Adiciona espaçamento horizontal nas setas */
         }
         .swiper-button-next:hover, .swiper-button-prev:hover { 
-          background-color: #2D3F42ee; 
+          background-color: rgba(44, 62, 80, 0.95); 
           transform: scale(1.05);
         }
         .swiper-button-next:after, .swiper-button-prev:after { 
@@ -114,7 +114,7 @@ const Banner: React.FC = () => {
           box-shadow: 0 1px 3px rgba(0,0,0,0.3);
         }
         .swiper-pagination-bullet-active { 
-          background-color: #00D54B !important; 
+          background-color: #E67E22 !important; 
           width: 12px !important; 
           height: 12px !important; 
         }

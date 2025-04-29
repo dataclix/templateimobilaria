@@ -1,0 +1,56 @@
+# Regras de Transformação do Template Imobiliário
+
+Este arquivo contém a inteligência do projeto e os padrões adotados durante o processo de templatização do site específico para um template genérico.
+
+## Padrões de Abstração
+
+1. **Paleta de Cores**
+   - Definida no `tailwind.config.ts` usando o prefixo `re-`
+   - Cores principais:
+     - `re-base`: #2C3E50 (Azul Escuro Sóbrio)
+     - `re-accent`: #E67E22 (Laranja Queimado Suave)
+     - `re-bg`: #FFFFFF (Branco Puro)
+     - `re-bg-alt`: #F8F9FA (Cinza Muito Claro)
+     - `re-text-main`: #34495E (Cinza Azulado Escuro)
+     - `re-text-secondary`: #7F8C8D (Cinza Médio Neutro)
+     - `re-text-tertiary`: #B0BEC5 (Cinza Claro Azulado)
+     - `re-text-invert`: #FFFFFF (Branco para textos invertidos)
+
+2. **Referências de Marca**
+   - Logo: `/images/logo.webp`
+   - Nome genérico: "Imobiliária" ou "Nome da Imobiliária"
+   - Domínio: `imobiliaria-template.com.br`
+   - Email: `contato@imobiliaria-template.com.br`
+   - Telefone: `+55 (00) 0000-0000`
+   - Endereço: `Endereço da Imobiliária, 100, Sua Cidade - UF, 00000-000`
+
+3. **Variáveis Globais**
+   - Definidas em `components/globals/variavels.ts`
+   - API URL mantida (não específica da marca)
+   - Site URL atualizada para domínio genérico
+
+4. **Estrutura de Componentes**
+   - Manter a mesma estrutura de componentes
+   - Componentes dinâmicos com suspense e fallback
+   - Abstrair apenas referências específicas da RE Imóveis
+
+5. **SEO e Schema.org**
+   - Estrutura de dados atualizada para informações genéricas
+   - Meta tags otimizadas para template
+   - `theme-color` atualizada para `#2C3E50`
+
+## Estratégia de Abstração
+
+1. Substituir cores específicas por variáveis Tailwind
+2. Remover referências diretas à marca original
+3. Manter funcionalidades intactas
+4. Preservar estrutura de componentes
+5. Atualizar apenas textos e elementos visuais específicos
+6. Manter a mesma estrutura de APIs e dados
+
+## Próximos Passos
+
+1. Completar a despersonalização dos demais componentes
+2. Criar sistema de configuração para personalização
+3. Documentar pontos de configuração
+4. Criar guia de personalização 

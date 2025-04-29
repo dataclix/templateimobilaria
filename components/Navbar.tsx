@@ -109,8 +109,8 @@ const Navbar: React.FC = () => {
           <div className="flex-shrink-0"> 
             <Link href="/" className="block" aria-label="Ir para página inicial">
               <img
-                src="/images/reimoveis.webp" 
-                alt="Logo da Empresa"
+                src="/images/logo.webp" 
+                alt="Logo da Imobiliária"
                 width={104}
                 height={40}
                 className="h-auto"
@@ -171,8 +171,8 @@ const Navbar: React.FC = () => {
           {/* Logo no Drawer */}
           <Link href="/" onClick={toggleDrawer}>
              <img
-                src="/images/reimoveis.webp" 
-                alt="Logo da Empresa"
+                src="/images/logo.webp" 
+                alt="Logo da Imobiliária"
                 width={120}
                 height={45}
                 className="h-auto"

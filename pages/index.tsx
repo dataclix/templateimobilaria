@@ -75,16 +75,16 @@ const structuredData = {
   name: 'Imobiliária',
   description: 'Imobiliária especialista em compra, venda e aluguel de imóveis. Encontre casas, apartamentos, terrenos e mais.',
   url: urlSite,
-  logo: `${urlSite}/images/reimoveis.webp`,
-  image: `${urlSite}/images/reimoveis.webp`,
-  telephone: '+553233715400',
-  email: 'contato@imobiliaria.com.br',
+  logo: `${urlSite}/images/logo.webp`,
+  image: `${urlSite}/images/logo.webp`,
+  telephone: '+5500000000000',
+  email: 'contato@imobiliaria-template.com.br',
   address: {
     '@type': 'PostalAddress',
-    streetAddress: 'Rua Arthur Bernardes, 130',
-    addressLocality: 'São João del-Rei',
-    addressRegion: 'MG',
-    postalCode: '36307-356',
+    streetAddress: 'Endereço da Imobiliária, 100',
+    addressLocality: 'Sua Cidade',
+    addressRegion: 'UF',
+    postalCode: '00000-000',
     addressCountry: 'BR'
   },
   sameAs: [
@@ -93,7 +93,7 @@ const structuredData = {
   ],
   areaServed: {
     '@type': 'Place',
-    name: 'São João del-Rei'
+    name: 'Região Atendida'
   },
   priceRange: '$$$',
   hasMap: 'https://www.google.com/maps/'
@@ -181,11 +181,11 @@ const Home: React.FC = () => {
               <Skeleton variant="text" width={300} height={24} />
             </Box>
           ) : (
-            <div className="border-l-4 border-[#2e7d32] pl-4 py-2">
+            <div className="border-l-4 border-re-accent pl-4 py-2">
               <div>
                 <h2 id={`${sectionId}-heading`} className="text-2xl md:text-3xl font-bold relative text-re-text-main font-montserrat">
-                  <span className="text-[#2e7d32]">{title}</span>
-                  <div className="h-1 w-12 bg-[#4caf50] mt-1 rounded-full"></div>
+                  <span className="text-re-accent">{title}</span>
+                  <div className="h-1 w-12 bg-re-accent mt-1 rounded-full"></div>
                 </h2>
                 <p className="text-gray-600 mt-2 md:text-left max-w-xl text-re-text-secondary font-poppins">
                   Encontre o imóvel ideal para você e sua família, com as melhores condições do mercado
@@ -267,7 +267,7 @@ const Home: React.FC = () => {
     <div className="bg-gray-50 min-h-screen">
       <Head>
         <link rel="preload" href="/images/fundo.png" as="image" />
-        <link rel="preload" href="/images/reimoveis.webp" as="image" />
+        <link rel="preload" href="/images/logo.webp" as="image" />
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
@@ -300,7 +300,7 @@ const Home: React.FC = () => {
               type: 'image/jpeg',
             },
             {
-              url: `${urlSite}/images/reimoveis.webp`,
+              url: `${urlSite}/images/logo.webp`,
               width: 800,
               height: 600,
               alt: 'Logo da Imobiliária',
@@ -317,7 +317,7 @@ const Home: React.FC = () => {
         }}
         additionalMetaTags={[
           { name: 'viewport', content: 'width=device-width, initial-scale=1, maximum-scale=1' },
-          { name: 'theme-color', content: '#2e7d32' },
+          { name: 'theme-color', content: '#2C3E50' },
           { name: 'robots', content: 'index, follow' },
           { name: 'keywords', content: 'imóveis, imobiliária, casas à venda, apartamentos aluguel, terrenos, comprar imóvel, alugar imóvel' },
           { httpEquiv: 'content-type', content: 'text/html; charset=utf-8' },
@@ -400,11 +400,11 @@ const Home: React.FC = () => {
           top: 50% !important;
           transform: translateY(-50%);
           background: #fff;
-          color: #00D54B;
+          color: #E67E22;
           border-radius: 50%;
           width: 32px;
           height: 32px;
-          box-shadow: 0 2px 8px rgba(0,213,75,0.10);
+          box-shadow: 0 2px 8px rgba(230,126,34,0.10);
           z-index: 10;
         }
         .swiper-imoveis .swiper-button-next {
