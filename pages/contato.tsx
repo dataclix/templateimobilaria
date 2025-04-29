@@ -60,7 +60,7 @@ const contactInfo: ContactSection[] = [
       {
         label: "Endereço",
         value: "Avenida Tiradentes, 475\nCentro\nSão João del Rei - MG, CEP: 36307-330",
-        icon: <LocationOnIcon sx={{ color: '#2e7d32', fontSize: 24 }} />
+        icon: <LocationOnIcon sx={{ color: 'var(--re-accent)' }} />
       }
     ]
   },
@@ -71,13 +71,13 @@ const contactInfo: ContactSection[] = [
       {
         label: "Telefone Fixo",
         value: "(32) 3371-8800",
-        icon: <LocalPhoneIcon sx={{ color: '#2e7d32', fontSize: 24 }} />
+        icon: <LocalPhoneIcon sx={{ color: 'var(--re-accent)' }} />
       },
       {
         label: "WhatsApp",
         value: "(32) 9 9942-8800",
         link: "https://wa.me/5532999428800",
-        icon: <WhatsAppIcon sx={{ color: '#2e7d32', fontSize: 24 }} />
+        icon: <WhatsAppIcon sx={{ color: 'var(--re-accent)' }} />
       }
     ]
   },
@@ -89,7 +89,7 @@ const contactInfo: ContactSection[] = [
         label: "E-mail",
         value: "contato@reimoveis.com",
         link: "mailto:contato@reimoveis.com",
-        icon: <EmailIcon sx={{ color: '#2e7d32', fontSize: 24 }} />
+        icon: <EmailIcon sx={{ color: 'var(--re-accent)' }} />
       }
     ]
   },
@@ -101,7 +101,7 @@ const contactInfo: ContactSection[] = [
         label: "Instagram",
         value: "@refinanceira",
         link: "https://www.instagram.com/refinanceira/",
-        icon: <InstagramIcon sx={{ color: '#2e7d32', fontSize: 24 }} />
+        icon: <InstagramIcon sx={{ color: 'var(--re-accent)' }} />
       }
     ]
   }
@@ -294,15 +294,17 @@ const Contato: React.FC = () => {
       <Box 
         className="relative w-full h-[40vh] md:h-[50vh] flex items-center justify-center"
         sx={{ 
-          background: 'linear-gradient(135deg, #2e7d32 0%, #1b5e20 100%)',
+          background: 'linear-gradient(135deg, var(--re-base) 0%, #1a2c38 100%)',
         }}
       >
         <Box 
-          className="absolute inset-0 z-0 opacity-10" 
+          className="absolute inset-0 z-0 opacity-20" 
           sx={{
             backgroundImage: 'url("/images/imobiliara.webp")',
             backgroundSize: 'cover',
             backgroundPosition: 'center',
+            backgroundBlendMode: 'overlay',
+            backgroundColor: 'rgba(230, 126, 34, 0.1)',
           }}
         />
         
@@ -350,7 +352,7 @@ const Contato: React.FC = () => {
       <Box 
         className="relative z-10 -mt-10 md:-mt-16 pb-24"
         sx={{ 
-          background: 'linear-gradient(to bottom, #f2f7f2, #ffffff)',
+          background: 'linear-gradient(to bottom, var(--re-bg-alt), var(--re-bg))',
         }}
       >
         <Container maxWidth="lg" sx={{ mt: { xs: 6, md: 10 }, mb: 10 }}>
@@ -366,7 +368,7 @@ const Contato: React.FC = () => {
               {/* Left Side - Contact Info */}
               <Grid item xs={12} md={5} 
                 sx={{ 
-                  background: 'linear-gradient(135deg, #25383f 0%, #1a2a30 100%)',
+                  background: 'linear-gradient(135deg, var(--re-base) 0%, #1a2c38 100%)',
                   color: 'white',
                   position: 'relative',
                 }}
@@ -407,7 +409,7 @@ const Contato: React.FC = () => {
                         >
                           <Box 
                             sx={{ 
-                              backgroundColor: 'rgba(255,255,255,0.1)',
+                              backgroundColor: 'rgba(230, 126, 34, 0.2)',
                               borderRadius: '50%',
                               width: 42,
                               height: 42,
@@ -417,11 +419,11 @@ const Contato: React.FC = () => {
                               mr: 2
                             }}
                           >
-                            <LocationOnIcon sx={{ color: '#2e7d32' }} />
+                            <LocationOnIcon sx={{ color: 'var(--re-accent)' }} />
                           </Box>
                           
                           <Box>
-                            <Typography variant="subtitle2" fontWeight={600} sx={{ color: '#2e7d32' }}>
+                            <Typography variant="subtitle2" fontWeight={600} sx={{ color: 'var(--re-accent)' }}>
                               Endereço
                             </Typography>
                             <Typography variant="body2" sx={{ color: 'white', opacity: 0.9, whiteSpace: 'pre-line' }}>
@@ -434,7 +436,7 @@ const Contato: React.FC = () => {
                       <motion.div variants={fadeInUp} className="mb-6">
                         <Box 
                           component="a"
-                          href={contactInfo[1].content[0].link}
+                          href="tel:3233718800"
                           target="_blank"
                           rel="noopener noreferrer"
                           sx={{ 
@@ -451,7 +453,7 @@ const Contato: React.FC = () => {
                         >
                           <Box 
                             sx={{ 
-                              backgroundColor: 'rgba(255,255,255,0.1)',
+                              backgroundColor: 'rgba(230, 126, 34, 0.2)',
                               borderRadius: '50%',
                               width: 42,
                               height: 42,
@@ -461,14 +463,14 @@ const Contato: React.FC = () => {
                               mr: 2
                             }}
                           >
-                            <LocalPhoneIcon sx={{ color: '#2e7d32' }} />
+                            <LocalPhoneIcon sx={{ color: 'var(--re-accent)' }} />
                           </Box>
                           
                           <Box>
-                            <Typography variant="subtitle2" fontWeight={600} sx={{ color: '#2e7d32' }}>
+                            <Typography variant="subtitle2" fontWeight={600} sx={{ color: 'var(--re-accent)' }}>
                               Telefone Fixo
                             </Typography>
-                            <Typography variant="body2" sx={{ color: 'white', opacity: 0.9 }}>
+                            <Typography variant="body2" sx={{ color: 'var(--re-accent)', opacity: 0.9 }}>
                               {contactInfo[1].content[0].value}
                             </Typography>
                           </Box>
@@ -495,7 +497,7 @@ const Contato: React.FC = () => {
                         >
                           <Box 
                             sx={{ 
-                              backgroundColor: 'rgba(255,255,255,0.1)',
+                              backgroundColor: 'rgba(230, 126, 34, 0.2)',
                               borderRadius: '50%',
                               width: 42,
                               height: 42,
@@ -505,14 +507,14 @@ const Contato: React.FC = () => {
                               mr: 2
                             }}
                           >
-                            <WhatsAppIcon sx={{ color: '#2e7d32' }} />
+                            <WhatsAppIcon sx={{ color: 'var(--re-accent)' }} />
                           </Box>
                           
                           <Box>
-                            <Typography variant="subtitle2" fontWeight={600} sx={{ color: '#2e7d32' }}>
+                            <Typography variant="subtitle2" fontWeight={600} sx={{ color: 'var(--re-accent)' }}>
                               WhatsApp
                             </Typography>
-                            <Typography variant="body2" sx={{ color: 'white', opacity: 0.9 }}>
+                            <Typography variant="body2" sx={{ color: 'var(--re-accent)', opacity: 0.9 }}>
                               {contactInfo[1].content[1].value}
                             </Typography>
                           </Box>
@@ -539,7 +541,7 @@ const Contato: React.FC = () => {
                         >
                           <Box 
                             sx={{ 
-                              backgroundColor: 'rgba(255,255,255,0.1)',
+                              backgroundColor: 'rgba(230, 126, 34, 0.2)',
                               borderRadius: '50%',
                               width: 42,
                               height: 42,
@@ -549,14 +551,14 @@ const Contato: React.FC = () => {
                               mr: 2
                             }}
                           >
-                            <EmailIcon sx={{ color: '#2e7d32' }} />
+                            <EmailIcon sx={{ color: 'var(--re-accent)' }} />
                           </Box>
                           
                           <Box>
-                            <Typography variant="subtitle2" fontWeight={600} sx={{ color: '#2e7d32' }}>
+                            <Typography variant="subtitle2" fontWeight={600} sx={{ color: 'var(--re-accent)' }}>
                               Email
                             </Typography>
-                            <Typography variant="body2" sx={{ color: 'white', opacity: 0.9 }}>
+                            <Typography variant="body2" sx={{ color: 'var(--re-accent)', opacity: 0.9 }}>
                               {contactInfo[2].content[0].value}
                             </Typography>
                           </Box>
@@ -578,9 +580,9 @@ const Contato: React.FC = () => {
                             target="_blank"
                             rel="noopener noreferrer"
                             sx={{ 
-                              backgroundColor: 'rgba(255,255,255,0.1)',
+                              backgroundColor: 'rgba(230, 126, 34, 0.2)',
                               '&:hover': {
-                                backgroundColor: '#2e7d32',
+                                backgroundColor: 'var(--re-accent)',
                               }
                             }}
                           >
@@ -599,6 +601,7 @@ const Contato: React.FC = () => {
                       backgroundSize: 'cover',
                       backgroundPosition: 'center',
                       mixBlendMode: 'overlay',
+                      backgroundColor: 'rgba(230, 126, 34, 0.05)',
                     }}
                   />
                 </Box>
@@ -642,7 +645,7 @@ const Contato: React.FC = () => {
                               '& .MuiOutlinedInput-root': {
                                 borderRadius: 2,
                                 '&:hover .MuiOutlinedInput-notchedOutline': {
-                                  borderColor: '#2e7d32',
+                                  borderColor: 'var(--re-accent)',
                                 },
                               },
                             }}
@@ -670,7 +673,7 @@ const Contato: React.FC = () => {
                               '& .MuiOutlinedInput-root': {
                                 borderRadius: 2,
                                 '&:hover .MuiOutlinedInput-notchedOutline': {
-                                  borderColor: '#2e7d32',
+                                  borderColor: 'var(--re-accent)',
                                 },
                               },
                             }}
@@ -697,7 +700,7 @@ const Contato: React.FC = () => {
                               '& .MuiOutlinedInput-root': {
                                 borderRadius: 2,
                                 '&:hover .MuiOutlinedInput-notchedOutline': {
-                                  borderColor: '#2e7d32',
+                                  borderColor: 'var(--re-accent)',
                                 },
                               },
                             }}
@@ -726,7 +729,7 @@ const Contato: React.FC = () => {
                               '& .MuiOutlinedInput-root': {
                                 borderRadius: 2,
                                 '&:hover .MuiOutlinedInput-notchedOutline': {
-                                  borderColor: '#2e7d32',
+                                  borderColor: 'var(--re-accent)',
                                 },
                               },
                             }}
@@ -741,17 +744,28 @@ const Contato: React.FC = () => {
                             fullWidth
                             sx={{
                               py: 1.5,
-                              backgroundColor: '#2e7d32',
+                              backgroundColor: 'var(--re-accent)',
                               color: 'white',
                               borderRadius: 2,
                               fontWeight: 600,
                               '&:hover': {
-                                backgroundColor: '#1b5e20',
+                                backgroundColor: '#c46a1b',
+                              },
+                              '&:disabled': {
+                                backgroundColor: 'rgba(230, 126, 34, 0.6)',
+                                color: 'white',
                               },
                             }}
-                            endIcon={loading ? <CircularProgress size={20} color="inherit" /> : <ArrowForwardIcon />}
+                            endIcon={loading ? null : <ArrowForwardIcon />}
                           >
-                            {loading ? 'Enviando...' : 'Enviar Mensagem'}
+                            {loading ? (
+                              <>
+                                <CircularProgress size={24} thickness={5} sx={{ mr: 1, color: 'white' }} />
+                                Enviando...
+                              </>
+                            ) : (
+                              'Enviar Mensagem'
+                            )}
                           </Button>
                         </Grid>
                       </Grid>
@@ -803,7 +817,7 @@ const Contato: React.FC = () => {
               animate="visible"
               variants={fadeInUp}
             >
-              <Typography variant="h5" fontWeight={700} color="#2e7d32">
+              <Typography variant="h5" fontWeight={700} sx={{ color: 'var(--re-accent)' }}>
                 RE Imóveis
               </Typography>
               <Typography variant="subtitle1" fontWeight={600} color="text.secondary" sx={{ mt: 1 }}>

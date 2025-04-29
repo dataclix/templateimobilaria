@@ -59,7 +59,7 @@ const Diferenciais: React.FC<DiferenciaisProps> = ({
           variant="h3" 
           component="h2" 
           className="mb-4 font-bold"
-          sx={{ color: '#25383f' }}
+          sx={{ color: 're-text-main' }}
         >
           {title}
         </Typography>
@@ -69,7 +69,7 @@ const Diferenciais: React.FC<DiferenciaisProps> = ({
           sx={{ 
             maxWidth: '800px',
             mx: 'auto',
-            color: '#4a5568'
+            color: 're-text-secondary'
           }}
         >
           {subtitle}
@@ -94,23 +94,23 @@ const Diferenciais: React.FC<DiferenciaisProps> = ({
                   transition: 'all 0.3s',
                   '&:hover': {
                     transform: 'translateY(-5px)',
-                    boxShadow: '0 10px 30px rgba(46, 125, 50, 0.15)'
+                    boxShadow: '0 10px 30px rgba(230, 126, 34, 0.15)'
                   }
                 }}
               >
                 <Box display="flex" alignItems="flex-start" mb={2}>
-                  <FaCheckCircle style={{ color: '#2e7d32', fontSize: 28, marginRight: 12, marginTop: 4 }} />
+                  <FaCheckCircle style={{ color: 're-accent', fontSize: 28, marginRight: 12, marginTop: 4 }} />
                   <Typography 
                     variant="h6" 
                     component="h3" 
                     className="font-semibold"
-                    sx={{ color: '#25383f' }}
+                    sx={{ color: 're-text-main' }}
                   >
                     {diferencial.title}
                   </Typography>
                 </Box>
                 
-                <Typography variant="body2" color="text.secondary">
+                <Typography variant="body2" sx={{ color: 're-text-secondary' }}>
                   {diferencial.description}
                 </Typography>
               </Paper>

@@ -28,7 +28,7 @@ const Historia: React.FC<HistoriaProps> = ({
           variant="h3" 
           component="h2" 
           className="mb-6 font-bold"
-          sx={{ color: '#25383f' }}
+          sx={{ color: 're-text-main' }}
         >
           {title}
         </Typography>
@@ -38,7 +38,7 @@ const Historia: React.FC<HistoriaProps> = ({
           sx={{ 
             maxWidth: '800px',
             mx: 'auto',
-            color: '#4a5568'
+            color: 're-text-secondary'
           }}
         >
           {description}
@@ -56,7 +56,7 @@ const Historia: React.FC<HistoriaProps> = ({
       >
         <Box 
           className="absolute top-0 left-0 w-2 h-full" 
-          sx={{ backgroundColor: '#2e7d32' }}
+          sx={{ backgroundColor: 're-accent' }}
         />
         
         <Grid container spacing={4}>
@@ -88,13 +88,13 @@ const Historia: React.FC<HistoriaProps> = ({
             <Box>
           
               <Typography variant="body1" paragraph className="text-re-text-secondary font-poppins">
-                Fundada recentemente, a RE Imóveis surge com o objetivo de transformar a experiência de quem busca comprar, vender ou alugar imóveis em São João del Rei e região.
+                Nossa imobiliária foi fundada com o objetivo de transformar a experiência de quem busca comprar, vender ou alugar imóveis em nossa região de atuação.
               </Typography>
               <Typography variant="body1" paragraph className="text-re-text-secondary font-poppins">
-                Inspirada pela proximidade com a RE Financeira, nossa imobiliária aposta em inovação, atendimento digital e soluções ágeis para facilitar a vida dos nossos clientes. Acreditamos que o novo pode ser simples, transparente e eficiente.
+                Apostamos em inovação, atendimento digital e soluções ágeis para facilitar a vida dos nossos clientes. Acreditamos que o novo pode ser simples, transparente e eficiente.
               </Typography>
               <Typography variant="body1" paragraph className="text-re-text-secondary font-poppins">
-                Nossa história está apenas começando, mas já nasce com o propósito de criar conexões verdadeiras, realizar sonhos e construir relações de confiança desde o primeiro contato.
+                Nossa história é construída dia após dia, com o propósito de criar conexões verdadeiras, realizar sonhos e construir relações de confiança desde o primeiro contato.
               </Typography>
             </Box>
           </Grid>

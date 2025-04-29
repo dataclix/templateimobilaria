@@ -24,7 +24,7 @@ const MissaoVisaoValores: React.FC<MissaoVisaoValoresProps> = ({
           variant="h3" 
           component="h2" 
           className="mb-4 font-bold"
-          sx={{ color: '#25383f' }}
+          sx={{ color: 're-text-main' }}
         >
           {title}
         </Typography>
@@ -34,7 +34,7 @@ const MissaoVisaoValores: React.FC<MissaoVisaoValoresProps> = ({
           sx={{ 
             maxWidth: '800px',
             mx: 'auto',
-            color: '#4a5568'
+            color: 're-text-secondary'
           }}
         >
           {subtitle}
@@ -58,7 +58,7 @@ const MissaoVisaoValores: React.FC<MissaoVisaoValoresProps> = ({
                 flexDirection: 'column',
                 alignItems: 'center',
                 borderRadius: 4,
-                border: '1px solid rgba(46, 125, 50, 0.2)',
+                border: '1px solid rgba(230, 126, 34, 0.2)',
                 transition: 'transform 0.3s',
                 '&:hover': {
                   transform: 'translateY(-10px)',
@@ -70,7 +70,7 @@ const MissaoVisaoValores: React.FC<MissaoVisaoValoresProps> = ({
                 variant="h5" 
                 component="h3" 
                 className="mb-4 font-semibold text-center"
-                sx={{ color: '#2e7d32', mb: 2 }}
+                sx={{ color: 're-accent', mb: 2 }}
               >
                 Missão
               </Typography>
@@ -81,7 +81,8 @@ const MissaoVisaoValores: React.FC<MissaoVisaoValoresProps> = ({
                   WebkitBoxOrient: 'vertical',
                   overflow: 'hidden',
                   textOverflow: 'ellipsis',
-                  textAlign: 'center'
+                  textAlign: 'center',
+                  color: 're-text-secondary'
                 }}>
                   Conectar pessoas a novos lares e oportunidades, proporcionando uma experiência imobiliária inovadora, ágil e humana.
                 </Typography>
@@ -106,7 +107,7 @@ const MissaoVisaoValores: React.FC<MissaoVisaoValoresProps> = ({
                 flexDirection: 'column',
                 alignItems: 'center',
                 borderRadius: 4,
-                border: '1px solid rgba(46, 125, 50, 0.2)',
+                border: '1px solid rgba(230, 126, 34, 0.2)',
                 transition: 'transform 0.3s',
                 '&:hover': {
                   transform: 'translateY(-10px)',
@@ -118,7 +119,7 @@ const MissaoVisaoValores: React.FC<MissaoVisaoValoresProps> = ({
                 variant="h5" 
                 component="h3" 
                 className="mb-4 font-semibold text-center"
-                sx={{ color: '#2e7d32', mb: 2 }}
+                sx={{ color: 're-accent', mb: 2 }}
               >
                 Visão
               </Typography>
@@ -129,9 +130,10 @@ const MissaoVisaoValores: React.FC<MissaoVisaoValoresProps> = ({
                   WebkitBoxOrient: 'vertical',
                   overflow: 'hidden',
                   textOverflow: 'ellipsis',
-                  textAlign: 'center'
+                  textAlign: 'center',
+                  color: 're-text-secondary'
                 }}>
-                  Ser reconhecida como a imobiliária mais inovadora e próxima do cliente em São João del Rei e região.
+                  Ser reconhecida como a imobiliária mais inovadora e próxima do cliente em nossa região de atuação.
                 </Typography>
               </Box>
             </Paper>
@@ -154,7 +156,7 @@ const MissaoVisaoValores: React.FC<MissaoVisaoValoresProps> = ({
                 flexDirection: 'column',
                 alignItems: 'center',
                 borderRadius: 4,
-                border: '1px solid rgba(46, 125, 50, 0.2)',
+                border: '1px solid rgba(230, 126, 34, 0.2)',
                 transition: 'transform 0.3s',
                 '&:hover': {
                   transform: 'translateY(-10px)',
@@ -166,7 +168,7 @@ const MissaoVisaoValores: React.FC<MissaoVisaoValoresProps> = ({
                 variant="h5" 
                 component="h3" 
                 className="mb-4 font-semibold text-center"
-                sx={{ color: '#2e7d32', mb: 2 }}
+                sx={{ color: 're-accent', mb: 2 }}
               >
                 Valores
               </Typography>
@@ -177,7 +179,8 @@ const MissaoVisaoValores: React.FC<MissaoVisaoValoresProps> = ({
                   WebkitBoxOrient: 'vertical',
                   overflow: 'hidden',
                   textOverflow: 'ellipsis',
-                  textAlign: 'center'
+                  textAlign: 'center',
+                  color: 're-text-secondary'
                 }}>
                   • Inovação
                 </Typography>
@@ -187,7 +190,8 @@ const MissaoVisaoValores: React.FC<MissaoVisaoValoresProps> = ({
                   WebkitBoxOrient: 'vertical',
                   overflow: 'hidden',
                   textOverflow: 'ellipsis',
-                  textAlign: 'center'
+                  textAlign: 'center',
+                  color: 're-text-secondary'
                 }}>
                   • Proximidade
                 </Typography>
@@ -197,7 +201,8 @@ const MissaoVisaoValores: React.FC<MissaoVisaoValoresProps> = ({
                   WebkitBoxOrient: 'vertical',
                   overflow: 'hidden',
                   textOverflow: 'ellipsis',
-                  textAlign: 'center'
+                  textAlign: 'center',
+                  color: 're-text-secondary'
                 }}>
                   • Transparência
                 </Typography>
@@ -207,7 +212,8 @@ const MissaoVisaoValores: React.FC<MissaoVisaoValoresProps> = ({
                   WebkitBoxOrient: 'vertical',
                   overflow: 'hidden',
                   textOverflow: 'ellipsis',
-                  textAlign: 'center'
+                  textAlign: 'center',
+                  color: 're-text-secondary'
                 }}>
                   • Agilidade
                 </Typography>
@@ -217,7 +223,8 @@ const MissaoVisaoValores: React.FC<MissaoVisaoValoresProps> = ({
                   WebkitBoxOrient: 'vertical',
                   overflow: 'hidden',
                   textOverflow: 'ellipsis',
-                  textAlign: 'center'
+                  textAlign: 'center',
+                  color: 're-text-secondary'
                 }}>
                   • Respeito
                 </Typography>

@@ -44,7 +44,7 @@ const FiltroFooter: React.FC<FiltroFooterProps> = ({
       <motion.button 
         whileTap={{ scale: 0.98 }} 
         onClick={showModal} 
-        className="w-full py-2.5 px-4 rounded-md text-sm font-medium bg-gray-800 text-white hover:bg-gray-700 flex items-center justify-center gap-2 transition-colors mt-2"
+        className="w-full py-2.5 px-4 rounded-md text-sm font-medium bg-re-base text-white hover:bg-opacity-90 flex items-center justify-center gap-2 transition-colors mt-2"
       >
         <Tune style={{ fontSize: '1rem' }} /> 
         Filtros Avançados
@@ -54,7 +54,7 @@ const FiltroFooter: React.FC<FiltroFooterProps> = ({
         <div className="mt-3 flex justify-center">
           <button 
             onClick={clearFilters} 
-            className="text-blue-600 text-xs font-medium hover:underline py-1 px-3 rounded-md flex items-center gap-1.5 transition-colors"
+            className="text-re-accent text-xs font-medium hover:underline py-1 px-3 rounded-md flex items-center gap-1.5 transition-colors"
           >
             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z" fill="currentColor"/>

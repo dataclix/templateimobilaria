@@ -123,16 +123,16 @@ const FiltroPreco: React.FC<FiltroPrecoProps> = ({
           max={getMaxSliderValue()}
           marks={marks}
           sx={{
-            color: '#00D54B', // re-accent
+            color: 'var(--re-accent)',
             height: 4,
             '& .MuiSlider-thumb': {
               height: 18,
               width: 18,
               backgroundColor: '#ffffff',
-              border: '2px solid #00D54B',
-              boxShadow: '0 0 0 4px rgba(0, 213, 75, 0.12)',
+              border: '2px solid var(--re-accent)',
+              boxShadow: '0 0 0 4px rgba(230, 126, 34, 0.12)',
               '&:focus, &:hover, &.Mui-active': {
-                boxShadow: '0 0 0 8px rgba(0, 213, 75, 0.16)',
+                boxShadow: '0 0 0 8px rgba(230, 126, 34, 0.16)',
               },
             },
             '& .MuiSlider-rail': {
@@ -151,10 +151,10 @@ const FiltroPreco: React.FC<FiltroPrecoProps> = ({
               marginTop: 0,
             },
             '& .MuiSlider-markActive': {
-              backgroundColor: '#00D54B',
+              backgroundColor: 'var(--re-accent)',
             },
             '& .MuiSlider-valueLabel': {
-              backgroundColor: '#2D3F42',
+              backgroundColor: 'var(--re-base)',
               fontSize: '0.7rem',
               fontWeight: 500,
               padding: '0.2rem 0.5rem',
@@ -163,7 +163,7 @@ const FiltroPreco: React.FC<FiltroPrecoProps> = ({
             '& .MuiSlider-markLabel': {
               fontSize: '0.6rem',
               fontWeight: 500,
-              color: '#6B7280',
+              color: 'var(--re-text-secondary)',
               marginTop: '4px',
               lineHeight: 1,
             },
@@ -172,7 +172,7 @@ const FiltroPreco: React.FC<FiltroPrecoProps> = ({
       </Box>
       
       {(minPrice !== undefined || maxPrice !== undefined) && (
-        <div className="text-[10px] text-re-text-secondary bg-gray-50 p-1 rounded-md border border-gray-100 -mt-1">
+        <div className="text-[10px] text-re-text-secondary bg-re-bg-alt p-1 rounded-md border border-gray-100 -mt-1">
           <span className="text-re-text-main font-medium">Selecionado: </span>
           {minPrice !== undefined && maxPrice !== undefined ? (
             <>Entre <span className="font-medium text-re-accent">{formatCurrency(minPrice)}</span> e <span className="font-medium text-re-accent">{formatCurrency(maxPrice)}</span></>

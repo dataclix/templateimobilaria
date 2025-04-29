@@ -71,7 +71,7 @@ const CorretorCard: React.FC<CorretorCardProps> = ({ corretor, index }) => {
           maxWidth: 300,
           borderRadius: '16px',
           overflow: 'visible',
-          bgcolor: '#F4F6F6',
+          bgcolor: 're-bg-alt',
           boxShadow: '0 4px 20px rgba(0, 0, 0, 0.08)',
           margin: '0 auto',
           textAlign: 'center',
@@ -84,7 +84,7 @@ const CorretorCard: React.FC<CorretorCardProps> = ({ corretor, index }) => {
             left: 0,
             width: '100%',
             height: '6px',
-            background: 'linear-gradient(90deg, #E67E22 0%, #2C3E50 100%)',
+            background: 'linear-gradient(90deg, var(--re-accent) 0%, var(--re-base) 100%)',
             borderTopLeftRadius: '16px',
             borderTopRightRadius: '16px'
           }
@@ -98,7 +98,7 @@ const CorretorCard: React.FC<CorretorCardProps> = ({ corretor, index }) => {
               width: 110,
               height: 110,
               margin: '0 auto',
-              border: `3px solid #E67E22`,
+              border: `3px solid var(--re-accent)`,
               boxShadow: '0 4px 12px rgba(230,126,34,0.18)',
             }}
           />
@@ -116,7 +116,7 @@ const CorretorCard: React.FC<CorretorCardProps> = ({ corretor, index }) => {
               width: '26px',
               height: '26px',
               borderRadius: '50%',
-              backgroundColor: '#E67E22',
+              backgroundColor: 're-accent',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
@@ -142,7 +142,7 @@ const CorretorCard: React.FC<CorretorCardProps> = ({ corretor, index }) => {
             variant="h6"
             sx={{ 
               fontWeight: '600', 
-              color: '#2C3E50', 
+              color: 're-text-main', 
               mb: 0.5, 
               fontFamily: 'Montserrat, sans-serif' 
             }}
@@ -152,7 +152,7 @@ const CorretorCard: React.FC<CorretorCardProps> = ({ corretor, index }) => {
           <Typography
             variant="body2"
             sx={{ 
-              color: '#34495E', 
+              color: 're-text-secondary', 
               fontWeight: '500', 
               mb: 0.5, 
               fontFamily: 'Poppins, sans-serif' 
@@ -163,7 +163,7 @@ const CorretorCard: React.FC<CorretorCardProps> = ({ corretor, index }) => {
           <Typography
             variant="caption"
             sx={{ 
-              color: '#7F8C8D', 
+              color: 're-text-tertiary', 
               display: 'block', 
               mb: 2, 
               height: '20px', 
@@ -180,7 +180,7 @@ const CorretorCard: React.FC<CorretorCardProps> = ({ corretor, index }) => {
             startIcon={<FaWhatsapp />}
             sx={{
               borderRadius: '8px',
-              bgcolor: '#E67E22',
+              bgcolor: 're-accent',
               color: 'white',
               fontWeight: '500',
               textTransform: 'none',
@@ -188,7 +188,7 @@ const CorretorCard: React.FC<CorretorCardProps> = ({ corretor, index }) => {
               py: 1,
               boxShadow: 'none',
               '&:hover': {
-                bgcolor: '#2C3E50',
+                bgcolor: 're-base',
                 boxShadow: '0 4px 10px rgba(230,126,34,0.3)',
               },
             }}
@@ -240,7 +240,7 @@ const Corretores: React.FC = () => {
       sx={{
         py: { xs: 8, md: 12 },
         px: { xs: 2, sm: 4 },
-        bgcolor: '#F8F9FA',
+        bgcolor: 're-bg-alt',
         position: 'relative',
         overflow: 'hidden',
       }}
@@ -292,7 +292,7 @@ const Corretores: React.FC = () => {
             sx={{
               fontSize: '0.875rem',
               fontWeight: 600,
-              color: '#E67E22',
+              color: 're-accent',
               letterSpacing: '1.2px',
               display: 'block',
               mb: 1,
@@ -305,7 +305,7 @@ const Corretores: React.FC = () => {
             variant="h4"
             sx={{
               fontWeight: 'bold',
-              color: '#2C3E50',
+              color: 're-text-main',
               mb: 2,
               fontFamily: 'Montserrat, sans-serif'
             }}
@@ -315,7 +315,7 @@ const Corretores: React.FC = () => {
           <Typography
             variant="body1"
             sx={{
-              color: '#34495E',
+              color: 're-text-secondary',
               maxWidth: '700px',
               fontSize: '1.125rem',
               margin: '0 auto',
@@ -365,7 +365,7 @@ const Corretores: React.FC = () => {
 
 <style jsx global>{`
   .swiper-button-next, .swiper-button-prev {
-    color: #2C3E50cc;
+    color: var(--re-base);
     background: #fff;
     border-radius: 50%;
     width: 44px;

@@ -116,19 +116,19 @@ const TabButton = styled(Button)<{ active?: boolean }>(({ theme, active }) => ({
   borderRadius: '16px 16px 0 0', // Arredondado no topo, combinando com o container
   fontWeight: 600,
   fontSize: '1.05rem',
-  padding: '15px 36px', // Mais padding para melhor visual
-  color: active ? '#00D54B' : '#555555',
+  padding: '15px 36px', 
+  color: active ? 'var(--re-accent)' : '#555555',
   backgroundColor: active ? '#FFFFFF' : 'rgba(255,255,255,0.84)',
   border: '1.5px solid #e0e5ec',
-  borderBottom: active ? 'none' : '1.5px solid #e0e5ec', // Remove borda inferior quando ativo
+  borderBottom: active ? 'none' : '1.5px solid #e0e5ec', 
   position: 'relative',
-  zIndex: active ? 30 : 10, // Botão ativo fica em cima
+  zIndex: active ? 30 : 10, 
   transition: 'all 0.2s',
   minWidth: '140px',
-  marginTop: '5px', // Adiciona espaço para que os botões não fiquem tão juntos do container
+  marginTop: '5px',
   '&:hover': {
     backgroundColor: active ? '#FFFFFF' : 'rgba(255,255,255,0.95)',
-    color: '#00D54B',
+    color: 'var(--re-accent)',
   },
   '&::after': active ? {
     content: '""',
@@ -149,17 +149,17 @@ const StyledFormControl = styled(FormControl)(({ theme }) => ({
     backgroundColor: 'rgba(244,246,246,0.82)', // bg-re-bg-alt
     fontSize: '0.98rem',
     '&:hover': {
-      borderColor: '#00D54B',
+      borderColor: 'var(--re-accent)',
       backgroundColor: 'rgba(244,246,246,0.95)',
     },
     '&.Mui-focused': {
-      borderColor: '#00D54B',
+      borderColor: 'var(--re-accent)',
       backgroundColor: '#F4F6F6',
     },
   },
   '& .MuiInputLabel-root': {
     fontWeight: 600,
-    color: '#5A6C6F', // text-re-text-secondary
+    color: 'var(--re-text-secondary)', // text-re-text-secondary
     fontSize: '1rem',
   },
   marginBottom: 8,
@@ -172,48 +172,51 @@ const StyledTextField = styled(TextField)(({ theme }) => ({
     backgroundColor: 'rgba(244,246,246,0.85)', // bg-re-bg-alt
     fontSize: '1rem',
     '&:hover': {
-      borderColor: '#00D54B',
+      borderColor: 'var(--re-accent)',
       backgroundColor: 'rgba(244,246,246,0.95)',
     },
     '&.Mui-focused': {
-      borderColor: '#00D54B',
+      borderColor: 'var(--re-accent)',
       backgroundColor: '#F4F6F6',
     },
   },
 }));
 
 const SearchButton = styled(Button)(({ theme }) => ({
-  backgroundColor: '#00D54B', // Accent
-  color: 'white',
+  backgroundColor: 'var(--re-accent)', // Accent (laranja) por padrão
+  color: 'white', // Texto branco
   borderRadius: '10px',
-  padding: '12px 28px', // Ajustado para ocupar menos espaço
+  padding: '12px 28px', 
   fontWeight: 700,
-  boxShadow: '0 4px 16px rgba(0, 213, 75, 0.16)',
+  boxShadow: '0 4px 16px rgba(230, 126, 34, 0.16)',
   transition: 'all 0.3s',
-  marginLeft: '8px', // Adiciona um espaço entre o dropdown e o botão
-  height: '56px', // Mantém a mesma altura do dropdown para alinhamento
+  marginLeft: '8px', 
+  height: '56px', 
   '&:hover': {
-    backgroundColor: '#00b944', // Tom mais escuro do accent
-    boxShadow: '0 6px 20px rgba(0, 213, 75, 0.20)',
+    backgroundColor: '#c46a1b', // Tom mais escuro do accent
+    boxShadow: '0 6px 20px rgba(230, 126, 34, 0.20)',
+  },
+  '&.Mui-disabled': {
+    backgroundColor: 'rgba(230, 126, 34, 0.5)',
+    color: 'white', // Mantém texto branco mesmo quando desabilitado
   },
 }));
 
 const StyledChip = styled(Chip)(({ theme }) => ({
-  backgroundColor: '#F4F6F6', // bg-re-bg-alt
-  color: '#2D3F42', // text-re-text-main
+  backgroundColor: 'rgba(230, 126, 34, 0.1)', // Leve tom de accent
+  color: 'var(--re-text-main)',
   fontWeight: 500,
-  borderRadius: 8,
-  '& .MuiChip-label': {
-    paddingLeft: '7px',
-    paddingRight: '10px',
-  },
+  border: '1px solid rgba(230, 126, 34, 0.2)', // Borda sutil com cor accent
   '& .MuiChip-deleteIcon': {
-    marginRight: '3px',
-    fontSize: '1.08rem',
+    color: 'var(--re-accent)',
+    '&:hover': {
+      color: 'var(--re-base)',
+    },
+  },
+  '&:hover': {
+    backgroundColor: 'rgba(230, 126, 34, 0.15)', // Ligeiramente mais escuro no hover
   },
 }));
-
-const GREEN_ICON = '#00D54B';
 
 const CATEGORIAS: Categoria[] = [
   { key: 0, label: "Todos" },

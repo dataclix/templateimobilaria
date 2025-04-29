@@ -92,14 +92,14 @@ const StatCard = memo(({ stat, index, isInView }: StatCardProps) => (
       scale: 1.02,
       transition: { duration: 0.2 }
     }}
-    className="relative bg-[#ededed] p-8 rounded-xl shadow-[0_4px_20px_rgba(0,0,0,0.08)] 
+    className="relative bg-re-bg-alt p-8 rounded-xl shadow-[0_4px_20px_rgba(0,0,0,0.08)] 
                transform-gpu backdrop-blur-sm border border-gray-100"
   >
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
-      className="text-4xl font-bold text-[#ee731a] mb-6"
+      className="text-4xl font-bold text-re-accent mb-6"
     >
       {isInView && (
         <CountUp
@@ -114,10 +114,10 @@ const StatCard = memo(({ stat, index, isInView }: StatCardProps) => (
         />
       )}
     </motion.div>
-    <h4 className="text-xl font-semibold text-gray-800 mb-3">
+    <h4 className="text-xl font-semibold text-re-text-main mb-3">
       {stat.title}
     </h4>
-    <p className="text-sm text-gray-600">
+    <p className="text-sm text-re-text-secondary">
       {stat.subtitle}
     </p>
   </motion.div>
@@ -135,7 +135,7 @@ const Numeros = () => {
 
   return (
     <section 
-      className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 bg-gradient-to-b from-white to-gray-50" 
+      className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 bg-gradient-to-b from-re-bg to-re-bg-alt" 
       ref={sectionRef}
       aria-labelledby="numbers-title"
     >
@@ -147,11 +147,11 @@ const Numeros = () => {
       >
         <h2 
           id="numbers-title"
-          className="text-3xl font-bold text-gray-900 mb-4 max-w-3xl mx-auto"
+          className="text-3xl font-bold text-re-text-main mb-4 max-w-3xl mx-auto"
         >
           A nossa missão é redefinir o mercado imobiliário a favor do cliente.
         </h2>
-        <p className="text-lg text-gray-600">
+        <p className="text-lg text-re-text-secondary">
           Transparência, eficiência e inovação em cada transação.
         </p>
       </motion.div>

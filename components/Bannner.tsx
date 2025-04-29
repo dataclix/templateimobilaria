@@ -92,7 +92,7 @@ const Banner: React.FC = () => {
           margin: 0 18px !important; /* Adiciona espaçamento horizontal nas setas */
         }
         .swiper-button-next:hover, .swiper-button-prev:hover { 
-          background-color: rgba(44, 62, 80, 0.95); 
+          background-color: var(--re-base); 
           transform: scale(1.05);
         }
         .swiper-button-next:after, .swiper-button-prev:after { 
@@ -114,7 +114,7 @@ const Banner: React.FC = () => {
           box-shadow: 0 1px 3px rgba(0,0,0,0.3);
         }
         .swiper-pagination-bullet-active { 
-          background-color: #E67E22 !important; 
+          background-color: var(--re-accent) !important; 
           width: 12px !important; 
           height: 12px !important; 
         }

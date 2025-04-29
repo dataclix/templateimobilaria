@@ -55,7 +55,7 @@ const Depoimentos: React.FC<DepoimentosProps> = ({
           variant="h3" 
           component="h2" 
           className="mb-4 font-bold"
-          sx={{ color: '#25383f' }}
+          sx={{ color: 're-text-main' }}
         >
           {title}
         </Typography>
@@ -65,7 +65,7 @@ const Depoimentos: React.FC<DepoimentosProps> = ({
           sx={{ 
             maxWidth: '800px',
             mx: 'auto',
-            color: '#4a5568'
+            color: 're-text-secondary'
           }}
         >
           {subtitle}
@@ -101,7 +101,7 @@ const Depoimentos: React.FC<DepoimentosProps> = ({
                       position: 'absolute',
                       top: -20,
                       left: 20,
-                      backgroundColor: '#2e7d32',
+                      backgroundColor: 're-accent',
                       width: 40,
                       height: 40,
                       borderRadius: '50%',
@@ -109,7 +109,7 @@ const Depoimentos: React.FC<DepoimentosProps> = ({
                       alignItems: 'center',
                       justifyContent: 'center',
                       color: 'white',
-                      boxShadow: '0 5px 15px rgba(46, 125, 50, 0.3)'
+                      boxShadow: '0 5px 15px rgba(230, 126, 34, 0.3)'
                     }}
                   >
                     <FormatQuoteIcon />
@@ -122,7 +122,7 @@ const Depoimentos: React.FC<DepoimentosProps> = ({
                       pt: 2,
                       pb: 2,
                       fontStyle: 'italic',
-                      color: '#4a5568'
+                      color: 're-text-secondary'
                     }}
                   >
                     &ldquo;{depoimento.testimonial}&rdquo;
@@ -141,11 +141,11 @@ const Depoimentos: React.FC<DepoimentosProps> = ({
                         variant="subtitle1" 
                         component="p" 
                         className="font-semibold"
-                        sx={{ color: '#25383f' }}
+                        sx={{ color: 're-text-main' }}
                       >
                         {depoimento.name}
                       </Typography>
-                      <Typography variant="body2" color="text.secondary">
+                      <Typography variant="body2" sx={{ color: 're-text-tertiary' }}>
                         {depoimento.position}
                       </Typography>
                     </Box>

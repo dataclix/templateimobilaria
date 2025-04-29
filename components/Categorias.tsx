@@ -20,10 +20,12 @@ interface PropertyCategory {
 }
 
 const PALETA = {
-  grafite: '#2D3F42',
-  verde: '#00D54B',
-  cinzaClaro: '#F4F6F6',
-  textoSecundario: '#5A6C6F',
+  base: 'var(--re-base)',
+  accent: 'var(--re-accent)',
+  bg: 'var(--re-bg)',
+  bgAlt: 'var(--re-bg-alt)',
+  textMain: 'var(--re-text-main)',
+  textSecondary: 'var(--re-text-secondary)',
 };
 
 const categories: PropertyCategory[] = [
@@ -41,7 +43,7 @@ const categories: PropertyCategory[] = [
     description: "Unidades em prédios residenciais",
     imageUrl: "/images/apartamentore.webp",
     tagLabel: "Mais Buscados",
-    tagColor: PALETA.verde,
+    tagColor: PALETA.accent,
   },
   {
     key: 3,
@@ -136,7 +138,7 @@ const CategoryCard = memo(({ category, isSelected, onSelect }: CategoryCardProps
         h-[260px] w-full
         transition-all duration-300
         ${isSelected 
-          ? 'ring-3 ring-[#00D54B] shadow-[0_8px_30px_rgba(0,213,75,0.18)]' 
+          ? 'ring-3 ring-re-accent shadow-[0_8px_30px_rgba(230,126,34,0.18)]' 
           : 'shadow-lg hover:shadow-xl'
         }
       `}
@@ -163,7 +165,7 @@ const CategoryCard = memo(({ category, isSelected, onSelect }: CategoryCardProps
           </p>
         </div>
         <motion.button
-          className="mt-auto flex items-center justify-center gap-1 px-4 py-2 bg-[#00D54B] text-white rounded-lg font-semibold text-sm shadow hover:bg-[#00993a] transition-all"
+          className="mt-auto flex items-center justify-center gap-1 px-4 py-2 bg-re-accent text-white rounded-lg font-semibold text-sm shadow hover:bg-opacity-90 transition-all"
           onClick={e => {
             e.stopPropagation();
             onSelect(category);
@@ -180,7 +182,7 @@ const CategoryCard = memo(({ category, isSelected, onSelect }: CategoryCardProps
         {/* Tag se existir */}
         {category.tagLabel && (
           <span
-            className="absolute top-3 right-3 px-2 py-1 rounded-full text-[10px] font-semibold bg-[#00D54B] text-white shadow"
+            className="absolute top-3 right-3 px-2 py-1 rounded-full text-[10px] font-semibold bg-re-accent text-white shadow"
           >
             {category.tagLabel}
           </span>
@@ -224,20 +226,20 @@ const Categorias = () => {
             variants={animations.title}
             className="text-center md:text-left mb-6 md:mb-0"
           >
-            <span className="text-[#00D54B] text-sm font-semibold tracking-wider uppercase block mb-2">
+            <span className="text-re-accent text-sm font-semibold tracking-wider uppercase block mb-2">
               Explore por categorias
             </span>
             <h2 
               id="categories-title"
-              className="text-3xl md:text-4xl font-bold text-[#2D3F42]"
+              className="text-3xl md:text-4xl font-bold text-re-base"
             >
-              Tipos de <span className="text-[#00D54B]">imóveis</span>
+              Tipos de <span className="text-re-accent">imóveis</span>
             </h2>
           </motion.div>
           
           <Link 
             href="/imoveis" 
-            className="inline-flex items-center bg-[#00D54B] text-white px-5 py-2.5 rounded-lg transition-all hover:bg-[#00993a] shadow-md hover:shadow-lg"
+            className="inline-flex items-center bg-re-accent text-white px-5 py-2.5 rounded-lg transition-all hover:bg-opacity-90 shadow-md hover:shadow-lg"
           >
             Ver todos imóveis
             <MdKeyboardArrowRight className="ml-1 text-lg" />

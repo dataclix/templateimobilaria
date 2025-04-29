@@ -28,16 +28,16 @@ const FiltroTipoImovel: React.FC<FiltroTipoImovelProps> = ({
     backgroundColor: 'white',
     borderRadius: '0.5rem',
     fontSize: '0.875rem',
-    color: '#2D3F42',
+    color: 'var(--re-text-main)',
     height: '42px',
     border: '1px solid #E5E7EB',
     boxShadow: 'none',
     '&:hover': {
-      borderColor: '#00D54B',
+      borderColor: 'var(--re-accent)',
     },
     '&.Mui-focused': {
-      borderColor: '#00D54B',
-      boxShadow: '0 0 0 2px rgba(0, 213, 75, 0.1)',
+      borderColor: 'var(--re-accent)',
+      boxShadow: '0 0 0 2px rgba(230, 126, 34, 0.1)',
     }
   };
 
@@ -72,8 +72,8 @@ const FiltroTipoImovel: React.FC<FiltroTipoImovelProps> = ({
               sx={{
                 fontSize: '0.9rem',
                 padding: '8px 16px',
-                '&:hover': { backgroundColor: 'rgba(0, 213, 75, 0.08)' },
-                '&.Mui-selected': { backgroundColor: 'rgba(0, 213, 75, 0.12)' }
+                '&:hover': { backgroundColor: 'rgba(230, 126, 34, 0.08)' },
+                '&.Mui-selected': { backgroundColor: 'rgba(230, 126, 34, 0.12)' }
               }}
             >
               {option.label}
