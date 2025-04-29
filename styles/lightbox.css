@@ -1,0 +1,5 @@
+.lightbox-image {
+    width: 100% !important; /* Garante que a imagem ocupe toda a largura disponível */
+    height: auto; /* Mantém a proporção da imagem */
+  }
+  

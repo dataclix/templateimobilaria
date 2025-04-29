@@ -1,0 +1,212 @@
+@import './fonts.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Fontes Google */
+/* Montserrat para títulos, Poppins para corpo */
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #2D3F42;
+  background-color: #FFFFFF;
+}
+
+h1, h2, h3, h4, h5, h6, .font-title, .font-heading {
+  font-family: 'Montserrat', sans-serif;
+  color: #2D3F42;
+  font-weight: 700;
+}
+
+.text-main {
+  color: #2D3F42;
+}
+.text-secondary {
+  color: #5A6C6F;
+}
+.text-tertiary {
+  color: #A0AEB0;
+}
+.text-invert {
+  color: #FFFFFF;
+}
+.bg-base {
+  background-color: #2D3F42;
+}
+.bg-accent {
+  background-color: #00D54B;
+}
+.bg-bg {
+  background-color: #FFFFFF;
+}
+.bg-bg-alt {
+  background-color: #F4F6F6;
+}
+
+/* Feedback colors */
+.text-success { color: #27AE60; }
+.text-warning { color: #F2C94C; }
+.text-error { color: #EB5757; }
+.text-info { color: #828282; }
+
+/* Placeholder custom para inputs e selects */
+.ant-input::placeholder, .custom-select-placeholder .ant-select-selection-placeholder {
+  color: #A0AEB0 !important;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Ajuste de cor de links */
+a {
+  color: #00D54B;
+  font-weight: 500;
+}
+a:hover {
+  color: #2D3F42;
+}
+
+/* Adicionando borda preta ao redor do texto branco */
+.text-white-with-black-border {
+  color: white;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+/* Alteração da cor do topo do Drawer */
+:where(.css-dev-only-do-not-override-f7vrd6).ant-drawer .ant-drawer-content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background: rgba(10, 41, 59, 0.8) !important; /* Adicionei opacidade aqui */
+  pointer-events: auto;
+}
+
+/* Estilização do ícone */
+.anticon {
+  display: inline-flex;
+  align-items: center;
+  color: #ffffff; /* Deixa o ícone branco */
+  font-size: 20px; /* Aumenta o tamanho do ícone */
+  font-style: normal;
+  line-height: 0;
+  text-align: center;
+  text-transform: none;
+  vertical-align: -0.125em;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.scrollbar-hidden {
+  overflow-x: scroll;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.scrollbar-hidden::-webkit-scrollbar {
+  display: none;  /* Chrome, Safari, and Opera */
+}
+
+/* Placeholder do select */
+.custom-select-placeholder .ant-select-selection-placeholder {
+  font-size: 16px !important; /* Aumenta o tamanho da fonte do placeholder */
+  color: gray !important; /* Troca a cor do placeholder */
+}
+
+/* Placeholder do input */
+.ant-input::placeholder {
+  font-size: 16px !important;
+  color: gray; /* Cor do placeholder */
+}
+
+/* Estilização do ícone da seta do select */
+.ant-select-arrow svg {
+  fill: #000 !important; /* Cor preta para a seta */
+}
+
+/* ----- Bordas arredondadas para os select e inputs ----- */
+
+/* Bordas arredondadas 3xl no seletor do select */
+.ant-select-selector {
+  font-size: 16px;
+  border-radius: 1.5rem !important; /* Aplica rounded-3xl (1.5rem) */
+  border: 1px solid gainsboro !important;
+  box-shadow: none !important; /* Remove qualquer sombra */
+}
+
+/* Bordas arredondadas 3xl no input */
+.ant-input {
+  border-radius: 1.5rem !important; /* Aplica rounded-3xl (1.5rem) */
+}
+
+/* Estilização do botão de fechar no Modal */
+:where(.css-dev-only-do-not-override-f7vrd6).ant-modal .ant-modal-close svg {
+  color: #0A293B !important; /* Cor azul definida */
+}
+
+/* Fundo azul escuro no Drawer */
+:where(.ant-drawer).ant-drawer-content,
+.custom-drawer .ant-drawer-content,
+.ant-drawer-content {
+  background-color: #0A293B !important;
+}
+
+/* Tamanho da fonte nos itens do Select */
+.ant-select-item {
+  font-size: 16px; /* Define o tamanho da fonte no item do menu */
+}
+
+/* Customização das setas do Swiper para RE Imóveis */
+.swiper-button-next,
+.swiper-button-prev {
+  background: #fff !important;
+  border: 2px solid #00D54B !important;
+  border-radius: 100%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 1 !important;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  color: #00D54B !important;
+  font-size: 1.4rem !important;
+  font-weight: bold !important;
+}
+
+/* Afasta as setas do Swiper dos corretores para fora no eixo X */
+.swiper-corretores .swiper-button-next {
+  right: -16px !important;
+}
+.swiper-corretores .swiper-button-prev {
+  left: -16px !important;
+}
+
+/* Swiper bullets e setas verdes em todas as páginas */
+.swiper-pagination-bullet {
+  background: #00D54B !important;
+  opacity: 0.3;
+}
+.swiper-pagination-bullet-active {
+  background: #00D54B !important;
+  opacity: 1;
+}
+.swiper-button-next,
+.swiper-button-prev {
+  color: #00D54B !important;
+  border: 2px solid #00D54B !important;
+  background: #fff !important;
+}
+
+/* ----------- Fim das customizações ------------ */
+
+@media (max-width: 767px) {
+  :where(.css-dev-only-do-not-override-f7vrd6).ant-modal-root .ant-modal {
+    max-width: 100vw !important;  /* Define a largura máxima como 100% da largura da tela */
+    margin: 0 !important;         /* Remove qualquer margem */
+  }
+}
