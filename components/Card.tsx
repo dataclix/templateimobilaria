@@ -146,7 +146,16 @@ const Card: React.FC<ImovelResumo> = ({
         : cidade;
         
     // Define o tipo do imóvel para exibição
-    const propertyType = tipo && tipo.includes('Terrenos') ? subtipo : tipo;
+    const propertyType = tipo && tipo.includes('Terrenos') || tipo && tipo.includes('Comércio') 
+        ? subtipo 
+        : tipo;
+        
+    // Define o subtipo para exibição (se necessário)
+    const displaySubtype = !tipo?.includes('Terrenos') && 
+                           !tipo?.includes('Comércio') && 
+                           subtipo && 
+                           tipo !== subtipo && 
+                           subtipo !== 'Padrão';
 
     return (
         <div 
@@ -225,6 +234,9 @@ const Card: React.FC<ImovelResumo> = ({
                     <span className={`text-base font-semibold ${isHovered ? 'text-white' : 'text-re-text-secondary'}`}>
                         {propertyType}
                     </span>
+                    {displaySubtype && (
+                        <span className={`ml-1 text-sm ${isHovered ? 'text-white/90' : 'text-gray-500'}`}> {subtipo}</span>
+                    )}
                     {bairro && cidade && (
                         <span className={`ml-1 text-sm ${isHovered ? 'text-white/90' : 'text-gray-500'}`}> - {bairro}</span>
                     )}

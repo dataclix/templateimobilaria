@@ -275,7 +275,18 @@ const Imovel: React.FC<ImovelProps> = ({ imovel }) => {
 
 
     // --- SEO Content Generation ---
-    const propertyType = imovel.tipo?.nome || 'Imóvel';
+    const propertyType = imovel.tipo?.nome?.includes('Terrenos') || imovel.tipo?.nome?.includes('Comércio')
+        ? imovel.subtipo?.nome
+        : imovel.tipo?.nome || 'Imóvel';
+    
+    const propertySubType = !imovel.tipo?.nome?.includes('Terrenos') && 
+                            !imovel.tipo?.nome?.includes('Comércio') && 
+                            imovel.subtipo?.nome && 
+                            imovel.tipo?.nome !== imovel.subtipo?.nome && 
+                            imovel.subtipo?.nome !== 'Padrão'
+                            ? ' ' + imovel.subtipo?.nome 
+                            : '';
+                            
     const modalityAction = imovel.modalidade?.toUpperCase() === 'ALUGUEL' ? 'para Alugar' : 'à Venda';
     const location = `${imovel.bairro}, ${imovel.cidade}`;
     // Garantir que a URL canônica está correta e não tem barras duplicadas
@@ -333,8 +344,8 @@ const Imovel: React.FC<ImovelProps> = ({ imovel }) => {
         }
     }, [canonicalUrl, router]);
 
-    const pageTitle = `${propertyType} ${modalityAction} em ${location} | Imobiliária (Cód: ${imovel.idInterno})`;
-    let pageDescription = `${propertyType} ${modalityAction} em ${location}. ${imovel.quartos || ''}${imovel.quartos ? ' quarto(s)' : ''}${imovel.banheiros ? `, ${imovel.banheiros} banheiro(s)` : ''}${imovel.garagens ? `, ${imovel.garagens} vaga(s)` : ''}${imovel.areaConstruida ? `, ${imovel.areaConstruida}m²` : ''}.`;
+    const pageTitle = `${propertyType}${propertySubType} ${modalityAction} em ${location} | Imobiliária (Cód: ${imovel.idInterno})`;
+    let pageDescription = `${propertyType}${propertySubType} ${modalityAction} em ${location}. ${imovel.quartos || ''}${imovel.quartos ? ' quarto(s)' : ''}${imovel.banheiros ? `, ${imovel.banheiros} banheiro(s)` : ''}${imovel.garagens ? `, ${imovel.garagens} vaga(s)` : ''}${imovel.areaConstruida ? `, ${imovel.areaConstruida}m²` : ''}.`;
     if (imovel.descricao) {
         pageDescription += ` ${imovel.descricao.substring(0, 100)}...`; // Adiciona trecho da descrição
     }
@@ -349,7 +360,7 @@ const Imovel: React.FC<ImovelProps> = ({ imovel }) => {
             { "@type": "ListItem", "position": 1, "name": "Início", "item": urlSite },
             // Adiciona link para a página de listagem se fizer sentido
             { "@type": "ListItem", "position": 2, "name": `Imóveis ${imovel.modalidade?.toUpperCase() === 'ALUGUEL' ? 'para Alugar' : 'à Venda'}`, "item": `${urlSite}imoveis?modalidade=${imovel.modalidade?.toUpperCase()}` },
-            { "@type": "ListItem", "position": 3, "name": `${propertyType} em ${imovel.bairro} (Cód: ${imovel.idInterno})` }
+            { "@type": "ListItem", "position": 3, "name": `${propertyType}${propertySubType} em ${imovel.bairro} (Cód: ${imovel.idInterno})` }
         ]
     };
 
@@ -408,7 +419,7 @@ const Imovel: React.FC<ImovelProps> = ({ imovel }) => {
         },
         "itemOffered": {
             "@type": propertySchemaType(), // Tipo dinâmico: House, Apartment, Land, etc.
-            "name": imovel.titulo || `${propertyType} em ${location}`,
+            "name": imovel.titulo || `${propertyType}${propertySubType} em ${location}`,
             "description": imovel.descricao || pageDescription.substring(0, 200),
             ...(imovel.quartos && { "numberOfRooms": imovel.quartos }),
             ...(imovel.banheiros && { "numberOfBathroomsTotal": imovel.banheiros }),
@@ -628,13 +639,13 @@ const Imovel: React.FC<ImovelProps> = ({ imovel }) => {
                 canonical={canonicalUrl}
                 openGraph={{
                     url: canonicalUrl,
-                    title: pageTitle,
+                    title: `${propertyType}${propertySubType} ${modalityAction} em ${location}`,
                     description: pageDescription.substring(0, 160),
                     images: [{
                         url: ogImageUrl,
                         width: 800,
                         height: 600,
-                        alt: `Foto principal de ${propertyType} ${modalityAction} em ${location}`,
+                        alt: `Foto principal de ${propertyType}${propertySubType} ${modalityAction} em ${location}`,
                         type: 'image/jpeg'
                     }],
                     site_name: 'Imobiliária',
@@ -647,7 +658,7 @@ const Imovel: React.FC<ImovelProps> = ({ imovel }) => {
                 additionalMetaTags={[
                     { name: 'viewport', content: 'width=device-width, initial-scale=1.0' },
                     { name: 'robots', content: 'index, follow' },
-                    { name: 'keywords', content: `${propertyType}, ${imovel.modalidade}, ${imovel.bairro}, ${imovel.cidade}, ${imovel.estadoSigla}, comprar imóvel, alugar imóvel, imobiliária, ${imovel.tipo?.nome}, ${imovel.subtipo?.nome}, código ${imovel.idInterno}` },
+                    { name: 'keywords', content: `${propertyType}${propertySubType}, ${imovel.modalidade}, ${imovel.bairro}, ${imovel.cidade}, ${imovel.estadoSigla}, comprar imóvel, alugar imóvel, imobiliária, ${imovel.tipo?.nome}, ${imovel.subtipo?.nome}, código ${imovel.idInterno}` },
                     { httpEquiv: 'content-type', content: 'text/html; charset=utf-8' },
                 ]}
             />
@@ -790,11 +801,15 @@ const Imovel: React.FC<ImovelProps> = ({ imovel }) => {
                                     </span>
                                 </div>
                                 <h1 className="text-2xl md:text-3xl font-bold text-gray-800 mb-2 text-re-text-main font-montserrat">
-                                    {imovel.tipo?.nome
-                                        ? imovel.tipo.nome.includes('Terrenos')
-                                            ? imovel.subtipo?.nome
-                                            : imovel.tipo.nome
-                                        : "Imóvel"} em {imovel.bairro}
+                                    {imovel.tipo?.nome?.includes('Terrenos') || imovel.tipo?.nome?.includes('Comércio')
+                                        ? imovel.subtipo?.nome
+                                        : imovel.tipo?.nome || "Imóvel"}
+                                    {!imovel.tipo?.nome?.includes('Terrenos') && 
+                                     !imovel.tipo?.nome?.includes('Comércio') && 
+                                     imovel.subtipo?.nome && 
+                                     imovel.tipo?.nome !== imovel.subtipo?.nome && 
+                                     imovel.subtipo?.nome !== 'Padrão' 
+                                     ? ' ' + imovel.subtipo?.nome : ''} em {imovel.bairro}
                                 </h1>
                                 <div className="flex items-center text-gray-600 text-re-text-secondary font-poppins">
                                     <FaMapMarkerAlt className="mr-2 text-[#2e7d32]" />
