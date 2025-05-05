@@ -111,13 +111,13 @@ const Footer: React.FC = () => {
                 {/* Parte Superior com o Conteúdo Principal */}
                 <div className="container mx-auto px-4 lg:px-8 py-16">
                     <Grid container spacing={6} justifyContent="center">
-                        {/* Coluna 1: Logo e Sobre */}
+                        {/* Coluna 1: logot e Sobre */}
                         <Grid item xs={12} sm={6} md={4} lg={3} className="flex flex-col items-center md:items-start">
                             <div className="flex flex-col w-full items-center md:items-start">
                                 <Link href="/" className="mb-5 inline-block">
                                    <Image
-                                        src="/images/logo.webp"
-                                        alt="Logo da Imobiliária"
+                                        src="/images/logot.webp"
+                                        alt="logot da Imobiliária"
                                         width={130}
                                         height={70}
                                         className="w-[130px] h-auto mx-auto md:mx-0"
@@ -290,7 +290,7 @@ const Footer: React.FC = () => {
                             >
                                 <Image
                                     src="/images/logosite.webp"
-                                    alt="Dataclix Logo"
+                                    alt="Dataclix logot"
                                     width={65}
                                     height={25}
                                     className="w-[65px] h-auto ml-1"

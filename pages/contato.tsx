@@ -116,7 +116,7 @@ const structuredDataContact = {
   name: 'RE Imóveis',
   description: 'Entre em contato com a RE Imóveis. Endereço, telefones (WhatsApp e Fixo), email e redes sociais.',
   url: urlSite,
-  logo: `${urlSite}/images/reimoveis.webp`,
+  logot: `${urlSite}/images/reimoveis.webp`,
   image: `${urlSite}/images/og-image.jpg`,
   telephone: [
     '+553233718800',
@@ -269,7 +269,7 @@ const Contato: React.FC = () => {
               url: `${urlSite}/images/reimoveis.webp`,
               width: 800,
               height: 600,
-              alt: 'Logo da RE Imóveis',
+              alt: 'logot da RE Imóveis',
               type: 'image/webp',
             },
           ],
@@ -298,13 +298,23 @@ const Contato: React.FC = () => {
         }}
       >
         <Box 
-          className="absolute inset-0 z-0 opacity-20" 
+          className="absolute inset-0 z-0" 
           sx={{
             backgroundImage: 'url("/images/imobiliara.webp")',
             backgroundSize: 'cover',
             backgroundPosition: 'center',
-            backgroundBlendMode: 'overlay',
-            backgroundColor: 'rgba(230, 126, 34, 0.1)',
+            backgroundBlendMode: 'soft-light',
+            backgroundColor: 'rgba(199, 176, 128, 0.7)',
+            '&::after': {
+              content: '""',
+              position: 'absolute',
+              top: 0,
+              left: 0,
+              width: '100%',
+              height: '100%',
+              background: 'linear-gradient(135deg, rgba(199, 176, 128, 0.6) 0%, rgba(44, 62, 80, 0.8) 100%)',
+              mixBlendMode: 'normal',
+            }
           }}
         />
         
@@ -388,11 +398,11 @@ const Contato: React.FC = () => {
                     className="relative z-10"
                   >
                     <motion.div variants={fadeInUp}>
-                      <Typography variant="h4" fontWeight={700} mb={4} sx={{ color: '#ffffff' }}>
+                      <Typography variant="h4" fontWeight={700} mb={4} sx={{ color: 'var(--re-accent)' }}>
                         Informações de Contato
                       </Typography>
                       
-                      <Typography variant="body1" sx={{ opacity: 0.85, mb: 5 }}>
+                      <Typography variant="body1" sx={{ color: '#C7B080', opacity: 0.85, mb: 5 }}>
                         Utilize qualquer um dos nossos canais de atendimento abaixo para nos contatar. Estamos disponíveis para atendê-lo.
                       </Typography>
                     </motion.div>
@@ -409,7 +419,7 @@ const Contato: React.FC = () => {
                         >
                           <Box 
                             sx={{ 
-                              backgroundColor: 'rgba(230, 126, 34, 0.2)',
+                              backgroundColor: 'rgba(199, 176, 128, 0.2)',
                               borderRadius: '50%',
                               width: 42,
                               height: 42,
@@ -426,7 +436,7 @@ const Contato: React.FC = () => {
                             <Typography variant="subtitle2" fontWeight={600} sx={{ color: 'var(--re-accent)' }}>
                               Endereço
                             </Typography>
-                            <Typography variant="body2" sx={{ color: 'white', opacity: 0.9, whiteSpace: 'pre-line' }}>
+                            <Typography variant="body2" sx={{ color: '#C7B080', opacity: 0.9, whiteSpace: 'pre-line' }}>
                               {contactInfo[0].content[0].value}
                             </Typography>
                           </Box>
@@ -444,7 +454,7 @@ const Contato: React.FC = () => {
                             alignItems: 'center',
                             mb: 2,
                             textDecoration: 'none',
-                            color: 'white',
+                            color: '#C7B080',
                             transition: 'all 0.2s',
                             '&:hover': {
                               transform: 'translateY(-2px)'
@@ -453,7 +463,7 @@ const Contato: React.FC = () => {
                         >
                           <Box 
                             sx={{ 
-                              backgroundColor: 'rgba(230, 126, 34, 0.2)',
+                              backgroundColor: 'rgba(199, 176, 128, 0.2)',
                               borderRadius: '50%',
                               width: 42,
                               height: 42,
@@ -488,7 +498,7 @@ const Contato: React.FC = () => {
                             alignItems: 'center',
                             mb: 2,
                             textDecoration: 'none',
-                            color: 'white',
+                            color: '#C7B080',
                             transition: 'all 0.2s',
                             '&:hover': {
                               transform: 'translateY(-2px)'
@@ -497,7 +507,7 @@ const Contato: React.FC = () => {
                         >
                           <Box 
                             sx={{ 
-                              backgroundColor: 'rgba(230, 126, 34, 0.2)',
+                              backgroundColor: 'rgba(199, 176, 128, 0.2)',
                               borderRadius: '50%',
                               width: 42,
                               height: 42,
@@ -532,7 +542,7 @@ const Contato: React.FC = () => {
                             alignItems: 'center',
                             mb: 2,
                             textDecoration: 'none',
-                            color: 'white',
+                            color: '#C7B080',
                             transition: 'all 0.2s',
                             '&:hover': {
                               transform: 'translateY(-2px)'
@@ -541,7 +551,7 @@ const Contato: React.FC = () => {
                         >
                           <Box 
                             sx={{ 
-                              backgroundColor: 'rgba(230, 126, 34, 0.2)',
+                              backgroundColor: 'rgba(199, 176, 128, 0.2)',
                               borderRadius: '50%',
                               width: 42,
                               height: 42,
@@ -569,7 +579,7 @@ const Contato: React.FC = () => {
                     {/* Social Media */}
                     <Box sx={{ mt: 8 }}>
                       <motion.div variants={fadeInUp}>
-                        <Typography variant="subtitle1" fontWeight={600} sx={{ color: 'white', mb: 2 }}>
+                        <Typography variant="subtitle1" fontWeight={600} sx={{ color: '#C7B080', mb: 2 }}>
                           Redes Sociais
                         </Typography>
                         
@@ -580,7 +590,7 @@ const Contato: React.FC = () => {
                             target="_blank"
                             rel="noopener noreferrer"
                             sx={{ 
-                              backgroundColor: 'rgba(230, 126, 34, 0.2)',
+                              backgroundColor: 'rgba(199, 176, 128, 0.2)',
                               '&:hover': {
                                 backgroundColor: 'var(--re-accent)',
                               }
@@ -601,7 +611,7 @@ const Contato: React.FC = () => {
                       backgroundSize: 'cover',
                       backgroundPosition: 'center',
                       mixBlendMode: 'overlay',
-                      backgroundColor: 'rgba(230, 126, 34, 0.05)',
+                      backgroundColor: 'rgba(199, 176, 128, 0.05)',
                     }}
                   />
                 </Box>
@@ -749,10 +759,10 @@ const Contato: React.FC = () => {
                               borderRadius: 2,
                               fontWeight: 600,
                               '&:hover': {
-                                backgroundColor: '#c46a1b',
+                                backgroundColor: 'var(--re-base)',
                               },
                               '&:disabled': {
-                                backgroundColor: 'rgba(230, 126, 34, 0.6)',
+                                backgroundColor: 'rgba(199, 176, 128, 0.6)',
                                 color: 'white',
                               },
                             }}

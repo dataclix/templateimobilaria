@@ -105,12 +105,12 @@ const Navbar: React.FC = () => {
       {/* Navbar Principal Fixa */}
       <nav className="fixed top-0 left-0 w-full z-50 bg-re-base text-white shadow-md"> 
         <div className="container mx-auto px-[5%] py-3 flex items-center justify-between"> 
-          {/* Logo */}
+          {/* logot */}
           <div className="flex-shrink-0"> 
             <Link href="/" className="block" aria-label="Ir para página inicial">
               <img
-                src="/images/logo.webp" 
-                alt="Logo da Imobiliária"
+                src="/images/logot.webp" 
+                alt="logot da Imobiliária"
                 width={104}
                 height={40}
                 className="h-auto"
@@ -157,7 +157,7 @@ const Navbar: React.FC = () => {
       {/* --- O div de espaçamento foi removido --- */}
       {/* Adicione padding-top ao seu layout principal ou ao primeiro elemento após a navbar */}
       {/* Exemplo: Em layout.tsx, o elemento <main> poderia ter `pt-[altura-da-navbar]` */}
-      {/* A altura da navbar agora é aproximadamente 60px (py-3 + altura da logo), ajuste o padding conforme necessário */}
+      {/* A altura da navbar agora é aproximadamente 60px (py-3 + altura da logot), ajuste o padding conforme necessário */}
 
 
       {/* Drawer (Menu Mobile) */}
@@ -168,11 +168,11 @@ const Navbar: React.FC = () => {
       >
         {/* Cabeçalho do Drawer */}
         <div className="flex justify-between items-center p-4 border-b border-gray-200">
-          {/* Logo no Drawer */}
+          {/* logot no Drawer */}
           <Link href="/" onClick={toggleDrawer}>
              <img
-                src="/images/logo.webp" 
-                alt="Logo da Imobiliária"
+                src="/images/logot.webp" 
+                alt="logot da Imobiliária"
                 width={120}
                 height={45}
                 className="h-auto"

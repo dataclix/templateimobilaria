@@ -11,16 +11,16 @@ interface HeroBannerProps {
 
 const HeroBanner: React.FC<HeroBannerProps> = ({
   title = "Sobre Nossa Imobiliária",
-  subtitle = "Desde 2005 realizando sonhos imobiliários",
-  bgColor = "linear-gradient(135deg, #2e7d32 0%, #1b5e20 100%)",
-  patternImage = "/images/imobiliara.webp"
+  subtitle = "logot realizando sonhos imobiliários",
+  bgColor = "linear-gradient(135deg, #C7B080 0%, #A69268 100%)",
+  patternImage = "/images/fundo.webp"
 }) => {
   return (
     <Box 
       className="relative w-full h-[50vh] md:h-[60vh] flex items-center justify-center"
       sx={{ 
         background: bgColor,
-      }}
+      }}    
     >
       <Box 
         className="absolute inset-0 z-0 opacity-10" 

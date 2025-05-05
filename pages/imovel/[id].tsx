@@ -404,7 +404,7 @@ const Imovel: React.FC<ImovelProps> = ({ imovel }) => {
                 "@type": "RealEstateAgent",
                 "name": "Imobiliária",
                 "url": urlSite,
-                "logo": `${urlSite}/images/reimoveis.webp`, // VERIFICAR CAMINHO
+                "logot": `${urlSite}/images/reimoveis.webp`, // VERIFICAR CAMINHO
                 "telephone": getWhatsAppNumber(), // Número principal de contato
                 // Endereço da imobiliária, não do imóvel
                 "address": {
@@ -763,7 +763,7 @@ const Imovel: React.FC<ImovelProps> = ({ imovel }) => {
                                 <SwiperSlide key={`thumb-${index}`}>
                                     <div
                                         className="relative h-full rounded-lg overflow-hidden cursor-pointer border-2 transition-all duration-300 hover:opacity-90"
-                                        style={{ borderColor: currentSlideIndex === index ? '#2e7d32' : 'transparent' }}
+                                        style={{ borderColor: currentSlideIndex === index ? '#C7B080' : 'transparent' }}
                                     >
                                         <Image
                                             src={foto}
@@ -785,13 +785,13 @@ const Imovel: React.FC<ImovelProps> = ({ imovel }) => {
                         <div className="flex flex-col md:flex-row justify-between">
                             <div className="flex-1">
                                 <div className="flex flex-wrap items-center gap-3 mb-2">
-                                    <span className="bg-[#e8f5e9] text-[#2e7d32] px-3 py-1 rounded-md text-sm font-semibold uppercase tracking-wide">
+                                    <span className="bg-[#F9F6F0] text-[#C7B080] px-3 py-1 rounded-md text-sm font-semibold uppercase tracking-wide">
                                         {imovel.modalidade}
                                     </span>
                                     {categoryData && categoryData.nome && (
                                         <span
                                             className="px-3 py-1 rounded-md text-sm font-semibold uppercase tracking-wide text-white"
-                                            style={{ backgroundColor: categoryData.cor || '#2e7d32' }}
+                                            style={{ backgroundColor: categoryData.cor || '#C7B080' }}
                                         >
                                             {categoryData.nome}
                                         </span>
@@ -812,7 +812,7 @@ const Imovel: React.FC<ImovelProps> = ({ imovel }) => {
                                      ? ' ' + imovel.subtipo?.nome : ''} em {imovel.bairro}
                                 </h1>
                                 <div className="flex items-center text-gray-600 text-re-text-secondary font-poppins">
-                                    <FaMapMarkerAlt className="mr-2 text-[#2e7d32]" />
+                                    <FaMapMarkerAlt className="mr-2 text-[#C7B080]" />
                                     <p className="text-md">
                                         {imovel.logradouro && imovel.exibirDetalhesEnderecoSite
                                             ? `${imovel.logradouro}, ${imovel.numero} - ${imovel.bairro}`
@@ -821,7 +821,7 @@ const Imovel: React.FC<ImovelProps> = ({ imovel }) => {
                                 </div>
                             </div>
                             <div className="mt-4 md:mt-0 flex flex-col items-end justify-center">
-                                <div className="text-3xl md:text-4xl font-bold text-[#2e7d32]">
+                                <div className="text-3xl md:text-4xl font-bold text-[#C7B080]">
                                     {formatarPreco(imovel.valor)}
                                 </div>
                             </div>
@@ -863,8 +863,8 @@ const Imovel: React.FC<ImovelProps> = ({ imovel }) => {
                                                     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
                                                         {items.map((item, index) => (
                                                             <div key={index} className="flex items-center">
-                                                                <div className="w-5 h-5 bg-[#e8f5e9] rounded-full flex items-center justify-center mr-3 flex-shrink-0">
-                                                                    <BsCheckCircleFill className="text-[#2e7d32] text-sm" />
+                                                                <div className="w-5 h-5 bg-[#F9F6F0] rounded-full flex items-center justify-center mr-3 flex-shrink-0">
+                                                                    <BsCheckCircleFill className="text-[#C7B080] text-sm" />
                                                                 </div>
                                                                 <span className="text-gray-700 text-re-text-secondary font-poppins">{item}</span>
                                                             </div>
@@ -884,45 +884,45 @@ const Imovel: React.FC<ImovelProps> = ({ imovel }) => {
                                 </h2>
                                 <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-6">
                                     {imovel.quartos > 0 && (
-                                        <div className="bg-[#f5f7fa] rounded-xl p-6 transition-all duration-300 hover:shadow-md hover:bg-[#e8f5e9] group">
+                                        <div className="bg-[#f5f7fa] rounded-xl p-6 transition-all duration-300 hover:shadow-md hover:bg-[#F9F6F0] group">
                                             <div className="flex flex-col items-center text-center">
-                                                <div className="w-14 h-14 bg-white rounded-full flex items-center justify-center mb-3 shadow-sm group-hover:bg-[#2e7d32] transition-colors duration-300">
-                                                    <FaBed className="text-[#2e7d32] text-xl group-hover:text-white transition-colors duration-300" />
+                                                <div className="w-14 h-14 bg-white rounded-full flex items-center justify-center mb-3 shadow-sm group-hover:bg-[#C7B080] transition-colors duration-300">
+                                                    <FaBed className="text-[#C7B080] text-xl group-hover:text-white transition-colors duration-300" />
                                                 </div>
-                                                <span className="text-gray-600 font-medium mb-1 group-hover:text-[#2e7d32] transition-colors duration-300 text-re-text-secondary font-poppins">Quartos</span>
+                                                <span className="text-gray-600 font-medium mb-1 group-hover:text-[#C7B080] transition-colors duration-300 text-re-text-secondary font-poppins">Quartos</span>
                                                 <span className="text-2xl font-bold text-gray-800">{imovel.quartos}</span>
                                             </div>
                                         </div>
                                     )}
                                     {imovel.banheiros > 0 && (
-                                        <div className="bg-[#f5f7fa] rounded-xl p-6 transition-all duration-300 hover:shadow-md hover:bg-[#e8f5e9] group">
+                                        <div className="bg-[#f5f7fa] rounded-xl p-6 transition-all duration-300 hover:shadow-md hover:bg-[#F9F6F0] group">
                                             <div className="flex flex-col items-center text-center">
-                                                <div className="w-14 h-14 bg-white rounded-full flex items-center justify-center mb-3 shadow-sm group-hover:bg-[#2e7d32] transition-colors duration-300">
-                                                    <FaBath className="text-[#2e7d32] text-xl group-hover:text-white transition-colors duration-300" />
+                                                <div className="w-14 h-14 bg-white rounded-full flex items-center justify-center mb-3 shadow-sm group-hover:bg-[#C7B080] transition-colors duration-300">
+                                                    <FaBath className="text-[#C7B080] text-xl group-hover:text-white transition-colors duration-300" />
                                                 </div>
-                                                <span className="text-gray-600 font-medium mb-1 group-hover:text-[#2e7d32] transition-colors duration-300 text-re-text-secondary font-poppins">Banheiros</span>
+                                                <span className="text-gray-600 font-medium mb-1 group-hover:text-[#C7B080] transition-colors duration-300 text-re-text-secondary font-poppins">Banheiros</span>
                                                 <span className="text-2xl font-bold text-gray-800">{imovel.banheiros}</span>
                                             </div>
                                         </div>
                                     )}
                                     {imovel.garagens > 0 && (
-                                        <div className="bg-[#f5f7fa] rounded-xl p-6 transition-all duration-300 hover:shadow-md hover:bg-[#e8f5e9] group">
+                                        <div className="bg-[#f5f7fa] rounded-xl p-6 transition-all duration-300 hover:shadow-md hover:bg-[#F9F6F0] group">
                                             <div className="flex flex-col items-center text-center">
-                                                <div className="w-14 h-14 bg-white rounded-full flex items-center justify-center mb-3 shadow-sm group-hover:bg-[#2e7d32] transition-colors duration-300">
-                                                    <FaCar className="text-[#2e7d32] text-xl group-hover:text-white transition-colors duration-300" />
+                                                <div className="w-14 h-14 bg-white rounded-full flex items-center justify-center mb-3 shadow-sm group-hover:bg-[#C7B080] transition-colors duration-300">
+                                                    <FaCar className="text-[#C7B080] text-xl group-hover:text-white transition-colors duration-300" />
                                                 </div>
-                                                <span className="text-gray-600 font-medium mb-1 group-hover:text-[#2e7d32] transition-colors duration-300 text-re-text-secondary font-poppins">Vagas</span>
+                                                <span className="text-gray-600 font-medium mb-1 group-hover:text-[#C7B080] transition-colors duration-300 text-re-text-secondary font-poppins">Vagas</span>
                                                 <span className="text-2xl font-bold text-gray-800">{imovel.garagens}</span>
                                             </div>
                                         </div>
                                     )}
                                     {imovel.areaConstruida && (
-                                        <div className="bg-[#f5f7fa] rounded-xl p-6 transition-all duration-300 hover:shadow-md hover:bg-[#e8f5e9] group">
+                                        <div className="bg-[#f5f7fa] rounded-xl p-6 transition-all duration-300 hover:shadow-md hover:bg-[#F9F6F0] group">
                                             <div className="flex flex-col items-center text-center">
-                                                <div className="w-14 h-14 bg-white rounded-full flex items-center justify-center mb-3 shadow-sm group-hover:bg-[#2e7d32] transition-colors duration-300">
-                                                    <FaRulerCombined className="text-[#2e7d32] text-xl group-hover:text-white transition-colors duration-300" />
+                                                <div className="w-14 h-14 bg-white rounded-full flex items-center justify-center mb-3 shadow-sm group-hover:bg-[#C7B080] transition-colors duration-300">
+                                                    <FaRulerCombined className="text-[#C7B080] text-xl group-hover:text-white transition-colors duration-300" />
                                                 </div>
-                                                <span className="text-gray-600 font-medium mb-1 group-hover:text-[#2e7d32] transition-colors duration-300 text-re-text-secondary font-poppins">Área</span>
+                                                <span className="text-gray-600 font-medium mb-1 group-hover:text-[#C7B080] transition-colors duration-300 text-re-text-secondary font-poppins">Área</span>
                                                 <span className="text-2xl font-bold text-gray-800">{imovel.areaConstruida}m²</span>
                                             </div>
                                         </div>
@@ -935,7 +935,7 @@ const Imovel: React.FC<ImovelProps> = ({ imovel }) => {
                         <div className="lg:col-span-1 order-2 lg:order-2">
                             {/* Contact card */}
                             <div className="bg-white rounded-2xl shadow-md overflow-hidden sticky top-24">
-                                <div className="bg-gradient-to-r from-[#2fa74e] to-[#5cc6a2] p-6">
+                                <div className="bg-gradient-to-r from-[#C7B080] to-[#A69268] p-6">
                                     <div className="flex items-center">
                                         <div className="w-16 h-16 rounded-full bg-white/20 p-1 mr-4">
                                             <div className="w-full h-full rounded-full overflow-hidden flex items-center justify-center bg-white">

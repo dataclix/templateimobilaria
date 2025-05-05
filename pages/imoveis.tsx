@@ -262,11 +262,11 @@ const Imoveis: React.FC = () => {
               alt: `Imóveis para ${modalidade === 'VENDA' ? 'Comprar' : 'Alugar'} em São João del-Rei - Zanfer Imóveis`,
               type: 'image/jpeg',
             },
-            { // Logo fallback
-              url: `${urlSite}/images/zanfer-logo.webp`, // VERIFIQUE O CAMINHO
+            { // logot fallback
+              url: `${urlSite}/images/zanfer-logot.webp`, // VERIFIQUE O CAMINHO
               width: 800,
               height: 600,
-              alt: 'Logo Zanfer Imóveis',
+              alt: 'logot Zanfer Imóveis',
               type: 'image/webp',
             },
           ],

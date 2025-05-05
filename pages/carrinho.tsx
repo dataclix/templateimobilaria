@@ -243,14 +243,14 @@ const Carrinho: React.FC = () => {
           </div>
           <div className="relative flex justify-center">
             <span className="bg-branco px-6 py-3 text-lg font-extrabold text-gray-900 rounded-full shadow-sm border border-gray-200">
-              Imóveis Selecionados <FaStar className="inline-block ml-2 text-verde" size={18} />
+              Imóveis Selecionados <FaStar className="inline-block ml-2 text-re-accent" size={18} />
             </span>
           </div>
         </div>
 
         {loading ? (
           <div className="flex flex-col items-center justify-center py-12">
-            <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-verde"></div>
+            <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-re-accent"></div>
             <p className="mt-4 text-gray-600">Carregando imóveis...</p>
           </div>
         ) : (
@@ -305,7 +305,7 @@ const Carrinho: React.FC = () => {
                             {/* Modalidade */}
                             <Typography
                               variant="caption"
-                              className="text-xs font-semibold uppercase px-2 py-1 bg-branco/50 rounded-tr-md rounded-br-md text-verde"
+                              className="text-xs font-semibold uppercase px-2 py-1 bg-branco/50 rounded-tr-md rounded-br-md text-re-accent"
                             >
                               {imovel.modalidade === 'VENDA' ? 'À Venda' : 'Alugar'}
                             </Typography>
@@ -353,7 +353,7 @@ const Carrinho: React.FC = () => {
 
                             {/* Preço no canto superior direito */}
                             <div className="absolute top-[-4px] right-0">
-                              <span className="px-3 py-2 bg-verde text-branco text-lg font-medium rounded-tr-xl rounded-bl-xl">
+                              <span className="px-3 py-2 bg-re-accent text-branco text-lg font-medium rounded-tr-xl rounded-bl-xl">
                                 {formatPrice(imovel.valor, imovel.modalidade)}
                               </span>
                             </div>
@@ -377,7 +377,7 @@ const Carrinho: React.FC = () => {
                               onClick={() => handleToggleFavorite(imovel.id)}
                               className="p-2 rounded-full bg-branco bg-opacity-70 hover:bg-opacity-90 transition-colors"
                             >
-                              <FaStar size={18} className="text-verde" />
+                              <FaStar size={18} className="text-re-accent" />
                             </button>
                           </div>
                         </div>
@@ -428,7 +428,7 @@ const Carrinho: React.FC = () => {
                   <div className="text-center mt-12">
                     <button
                       onClick={enviarFavoritosParaWhatsapp}
-                      className="px-8 py-4 rounded-lg bg-gradient-to-r from-green-500 to-green-600 text-branco font-bold hover:shadow-lg transform transition-all hover:-translate-y-1 flex items-center mx-auto"
+                      className="px-8 py-4 rounded-lg bg-gradient-to-r from-re-accent to-[#A69268] text-branco font-bold hover:shadow-lg transform transition-all hover:-translate-y-1 flex items-center mx-auto"
                     >
                       <FaWhatsapp className="mr-2" size={20} /> Consultar Disponibilidade
                     </button>
@@ -445,7 +445,7 @@ const Carrinho: React.FC = () => {
                 </div>
                 <h3 className="text-xl font-semibold text-gray-800 mb-2">Você ainda não possui imóveis favoritados</h3>
                 <p className="text-gray-600 mb-8">Adicione imóveis aos favoritos para visualizá-los aqui.</p>
-                <Link href="/" className="px-6 py-3 bg-verde text-branco rounded-lg hover:bg-green-700 transition-colors">
+                <Link href="/" className="px-6 py-3 bg-re-accent text-branco rounded-lg hover:bg-re-base transition-colors">
                   Explorar imóveis
                 </Link>
               </div>

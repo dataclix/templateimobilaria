@@ -99,7 +99,7 @@ const CorretorCard: React.FC<CorretorCardProps> = ({ corretor, index }) => {
               height: 110,
               margin: '0 auto',
               border: `3px solid var(--re-accent)`,
-              boxShadow: '0 4px 12px rgba(230,126,34,0.18)',
+              boxShadow: '0 4px 12px rgba(199,176,128,0.18)',
             }}
           />
           <motion.div
@@ -116,7 +116,7 @@ const CorretorCard: React.FC<CorretorCardProps> = ({ corretor, index }) => {
               width: '26px',
               height: '26px',
               borderRadius: '50%',
-              backgroundColor: 're-accent',
+              backgroundColor: '#C7B080',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
@@ -180,7 +180,7 @@ const CorretorCard: React.FC<CorretorCardProps> = ({ corretor, index }) => {
             startIcon={<FaWhatsapp />}
             sx={{
               borderRadius: '8px',
-              bgcolor: 're-accent',
+              bgcolor: '#C7B080',
               color: 'white',
               fontWeight: '500',
               textTransform: 'none',
@@ -188,8 +188,8 @@ const CorretorCard: React.FC<CorretorCardProps> = ({ corretor, index }) => {
               py: 1,
               boxShadow: 'none',
               '&:hover': {
-                bgcolor: 're-base',
-                boxShadow: '0 4px 10px rgba(230,126,34,0.3)',
+                bgcolor: '#2E2E2E',
+                boxShadow: '0 4px 10px rgba(199,176,128,0.3)',
               },
             }}
           >

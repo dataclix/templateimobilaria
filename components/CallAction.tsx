@@ -36,7 +36,7 @@ const CallAction: React.FC<CallActionProps> = () => {
       {/* Background Image with overlay */}
       <div className="absolute inset-0 z-0">
         <img
-          src="/images/banertemplate.jpg"
+          src="/images/fundo.webp"
           alt="Background Imóvel"
           className="z-0 object-cover w-full h-full"
           style={{ objectFit: 'cover', width: '100%', height: '100%' }}

@@ -17,7 +17,7 @@ Este arquivo contém a inteligência do projeto e os padrões adotados durante o
      - `re-text-invert`: #FFFFFF (Branco para textos invertidos)
 
 2. **Referências de Marca**
-   - Logo: `/images/logo.webp`
+   - logot: `/images/logot.webp`
    - Nome genérico: "Imobiliária" ou "Nome da Imobiliária"
    - Domínio: `imobiliaria-template.com.br`
    - Email: `contato@imobiliaria-template.com.br`

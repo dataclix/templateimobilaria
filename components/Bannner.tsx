@@ -10,7 +10,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/autoplay";
 
-const bannerImages = ["/images/banertemplate.jpg"];
+const bannerImages = ["/images/fundo.webp"];
 
 const Banner: React.FC = () => {
   return (
@@ -18,7 +18,7 @@ const Banner: React.FC = () => {
       {/* Mobile Background (z-0) */}
       <div className="block sm:hidden w-full h-full absolute inset-0 z-0">
         <img
-          src="/images/banertemplate.jpg"
+          src="/images/fundo.webp"
           alt="Banner Mobile"
           className="object-cover"
           style={{ objectFit: 'cover', width: '100%', height: '100%' }}

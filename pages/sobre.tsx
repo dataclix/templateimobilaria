@@ -67,7 +67,7 @@ const organizationSchema = {
   'name': 'Imobiliária',
   'description': 'Desde 2005, somos referência em soluções imobiliárias. Com uma equipe de profissionais especializados, oferecemos os melhores imóveis para compra, venda e locação.',
   'url': urlSite,
-  'logo': `${urlSite}/images/reimoveis.webp`,
+  'logot': `${urlSite}/images/reimoveis.webp`,
   'image': `${urlSite}/images/og-image.jpg`,
   'telephone': [
     '+553299999999',
@@ -192,7 +192,7 @@ const Sobre: React.FC = () => {
   const isMobile = useMediaQuery(theme.breakpoints.down('md'));
   
   return (
-    <Box className="min-h-screen flex flex-col font-poppins bg-re-bg">
+    <Box className="min-h-screen flex flex-col font-poppins bg-re-accent">
       <Head>
         <script
           type="application/ld+json"
@@ -230,7 +230,7 @@ const Sobre: React.FC = () => {
               url: `${urlSite}/images/reimoveis.webp`,
               width: 800,
               height: 600,
-              alt: 'Logo da Imobiliária',
+              alt: 'logot da Imobiliária',
               type: 'image/webp',
             },
           ],

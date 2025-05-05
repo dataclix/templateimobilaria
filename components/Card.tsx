@@ -164,14 +164,14 @@ const Card: React.FC<ImovelResumo> = ({
             onMouseLeave={() => setIsHovered(false)}
             style={{
                 transform: isHovered ? 'translateY(-5px)' : 'translateY(0)',
-                boxShadow: isHovered ? `0 10px 25px rgba(${isHovered ? '230,126,34,0.15' : '0,0,0,0.05'})` : '0 4px 6px rgba(0,0,0,0.05)',
-                border: isHovered ? '1px solid #E67E22' : '1px solid #e5e7eb'
+                boxShadow: isHovered ? '0 10px 25px rgba(199,176,128,0.15)' : '0 4px 6px rgba(0,0,0,0.05)',
+                border: isHovered ? '1px solid #C7B080' : '1px solid #e5e7eb'
             }}
         >
             <div 
                 className="absolute inset-0 z-0 transition-opacity duration-300"
                 style={{
-                    background: isHovered ? 'linear-gradient(90deg, #2C3E50 0%, #34495E 100%)' : 'none',
+                    background: isHovered ? 'linear-gradient(90deg, #2E2E2E 0%, #2E2E2E 85%, #C7B080 100%)' : 'none',
                     opacity: isHovered ? 0.85 : 0,
                     pointerEvents: 'none'
                 }}
@@ -199,7 +199,7 @@ const Card: React.FC<ImovelResumo> = ({
                         <div className="absolute top-2 left-2 z-10 flex items-center gap-2">
                             {categoria && categoria.nome && (
                                 <span
-                                    className="bg-[#4db6ac]/90 text-white text-xs font-medium py-1 px-2 rounded-md"
+                                    className="bg-[#C7B080]/90 text-white text-xs font-medium py-1 px-2 rounded-md"
                                     style={categoria.cor ? { backgroundColor: categoria.cor, opacity: 0.9 } : {}}
                                 >
                                     {categoria.nome}

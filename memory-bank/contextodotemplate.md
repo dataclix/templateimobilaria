@@ -17,4 +17,4 @@
 - Facilidade de contato
 
 ## Pontos de personalização
-- Cores, logotipo, textos institucionais, formulários, tipos de imóveis, filtros, destaques, etc. 
+- Cores, logottipo, textos institucionais, formulários, tipos de imóveis, filtros, destaques, etc. 

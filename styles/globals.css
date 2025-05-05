@@ -35,7 +35,7 @@ h1, h2, h3, h4, h5, h6, .font-title, .font-heading {
   background-color: #2D3F42;
 }
 .bg-accent {
-  background-color: #00D54B;
+  background-color: #C7B080;
 }
 .bg-bg {
   background-color: #FFFFFF;
@@ -58,7 +58,7 @@ h1, h2, h3, h4, h5, h6, .font-title, .font-heading {
 
 /* Ajuste de cor de links */
 a {
-  color: #00D54B;
+  color: #C7B080;
   font-weight: 500;
 }
 a:hover {
@@ -161,7 +161,7 @@ a:hover {
 .swiper-button-next,
 .swiper-button-prev {
   background: #fff !important;
-  border: 2px solid #00D54B !important;
+  border: 2px solid #C7B080 !important;
   border-radius: 100%;
   width: 40px;
   height: 40px;
@@ -173,7 +173,7 @@ a:hover {
 }
 .swiper-button-next::after,
 .swiper-button-prev::after {
-  color: #00D54B !important;
+  color: #C7B080 !important;
   font-size: 1.4rem !important;
   font-weight: bold !important;
 }
@@ -188,17 +188,17 @@ a:hover {
 
 /* Swiper bullets e setas verdes em todas as páginas */
 .swiper-pagination-bullet {
-  background: #00D54B !important;
+  background: #C7B080 !important;
   opacity: 0.3;
 }
 .swiper-pagination-bullet-active {
-  background: #00D54B !important;
+  background: #C7B080 !important;
   opacity: 1;
 }
 .swiper-button-next,
 .swiper-button-prev {
-  color: #00D54B !important;
-  border: 2px solid #00D54B !important;
+  color: #C7B080 !important;
+  border: 2px solid #C7B080 !important;
   background: #fff !important;
 }
 

@@ -75,8 +75,8 @@ const structuredData = {
   name: 'Imobiliária',
   description: 'Imobiliária especialista em compra, venda e aluguel de imóveis. Encontre casas, apartamentos, terrenos e mais.',
   url: urlSite,
-  logo: `${urlSite}/images/logo.webp`,
-  image: `${urlSite}/images/logo.webp`,
+  logot: `${urlSite}/images/logot.webp`,
+  image: `${urlSite}/images/logot.webp`,
   telephone: '+5500000000000',
   email: 'contato@imobiliaria-template.com.br',
   address: {
@@ -267,7 +267,7 @@ const Home: React.FC = () => {
     <div className="bg-gray-50 min-h-screen">
       <Head>
         <link rel="preload" href="/images/fundo.png" as="image" />
-        <link rel="preload" href="/images/logo.webp" as="image" />
+        <link rel="preload" href="/images/logot.webp" as="image" />
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
@@ -300,10 +300,10 @@ const Home: React.FC = () => {
               type: 'image/jpeg',
             },
             {
-              url: `${urlSite}/images/logo.webp`,
+              url: `${urlSite}/images/logot.webp`,
               width: 800,
               height: 600,
-              alt: 'Logo da Imobiliária',
+              alt: 'logot da Imobiliária',
               type: 'image/webp',
             },
           ],

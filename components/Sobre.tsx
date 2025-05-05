@@ -105,8 +105,8 @@ const TestimonialItem: FC<{ testimonial: Testimonial; index: number }> = memo(({
       display="flex"
       alignItems="center"
       justifyContent="center"
-      bgcolor="#e6f7ec" // Fundo levemente esverdeado para o ícone
-      color="#00b937"
+      bgcolor="rgba(199,176,128,0.15)" // Fundo leve de champanhe para o ícone (substituindo esverdeado)
+      color="#C7B080" // Cor champanhe (substituindo verde)
       width={48}
       height={48}
       borderRadius="50%"
@@ -133,10 +133,10 @@ const AboutUs: FC = () => {
 
   return (
     <Box className="w-full relative overflow-hidden mt-10 md:mt-20">
-      {/* Full width orange banner (mantido) */}
+      {/* Full width champanhe banner (Atualizado da cor laranja) */}
       <Box
         className="absolute z-10 w-screen"
-        bgcolor="#ff6a00"
+        bgcolor="#C7B080" // Alterado para champanhe
         sx={{
           height: { xs: '160px', md: '160px' },
           top: { xs: '240px', md: '280px', lg: '160px' },
@@ -217,7 +217,7 @@ const AboutUs: FC = () => {
             }}
           >
             <Box className="relative z-20">
-              {/* Orange banner content area (Estrutura mantida) */}
+              {/* Champanhe banner content area (Atualizado da cor laranja) */}
               <Box
                 sx={{
                   height: { xs: 'auto', md: '160px' }, display: 'flex',

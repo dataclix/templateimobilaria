@@ -26,11 +26,11 @@ const ServicoCard: React.FC<ServicoCardProps> = ({ icon, title, description }) =
                     textAlign: 'center',
                     height: '100%',
                     position: 'relative',
-                    backgroundColor: '#F8F9FA',
-                    color: '#2C3E50',
+                    backgroundColor: '#F5F5F5',
+                    color: '#2E2E2E',
                     overflow: 'hidden',
                     boxShadow: isHovered 
-                        ? '0 16px 30px rgba(230,126,34,0.15)' 
+                        ? '0 16px 30px rgba(199,176,128,0.15)' 
                         : '0 6px 15px rgba(0,0,0,0.05)',
                     '&::before': {
                         content: '""',
@@ -39,7 +39,7 @@ const ServicoCard: React.FC<ServicoCardProps> = ({ icon, title, description }) =
                         left: 0,
                         width: '100%',
                         height: '4px',
-                        background: 'linear-gradient(90deg, #E67E22 0%, #2C3E50 100%)',
+                        background: 'linear-gradient(90deg, #C7B080 0%, #2E2E2E 100%)',
                         opacity: isHovered ? 1 : 0.7,
                         transition: 'opacity 0.3s ease',
                     }
@@ -51,8 +51,8 @@ const ServicoCard: React.FC<ServicoCardProps> = ({ icon, title, description }) =
                     className="mb-6 relative z-10 p-3 rounded-full"
                     sx={{ 
                         fontSize: '2.5rem',
-                        color: '#E67E22',
-                        backgroundColor: isHovered ? 'rgba(230,126,34,0.08)' : 'transparent',
+                        color: '#C7B080',
+                        backgroundColor: isHovered ? 'rgba(199,176,128,0.08)' : 'transparent',
                         transition: 'all 0.3s ease'
                     }}
                 >
@@ -63,7 +63,7 @@ const ServicoCard: React.FC<ServicoCardProps> = ({ icon, title, description }) =
                     component="h3" 
                     className="mb-4 font-montserrat font-bold relative z-10"
                     sx={{ 
-                        color: '#2C3E50',
+                        color: '#2E2E2E',
                         fontSize: '1.25rem',
                         fontWeight: 700,
                         position: 'relative',
@@ -76,7 +76,7 @@ const ServicoCard: React.FC<ServicoCardProps> = ({ icon, title, description }) =
                             transform: 'translateX(-50%)',
                             width: isHovered ? '40px' : '25px',
                             height: '2px',
-                            backgroundColor: '#E67E22',
+                            backgroundColor: '#C7B080',
                             transition: 'all 0.3s ease'
                         }
                     }}
@@ -87,7 +87,7 @@ const ServicoCard: React.FC<ServicoCardProps> = ({ icon, title, description }) =
                     variant="body1" 
                     className="relative z-10 font-poppins"
                     sx={{ 
-                        color: '#7F8C8D',
+                        color: '#7D7D7D',
                         lineHeight: 1.6,
                         fontSize: '0.95rem'
                     }}
@@ -102,17 +102,17 @@ const ServicoCard: React.FC<ServicoCardProps> = ({ icon, title, description }) =
 const Servicos: React.FC = () => {
     const servicos: ServicoCardProps[] = [
         {
-            icon: <FaMoneyBillWave style={{ color: '#E67E22' }} />, 
+            icon: <FaMoneyBillWave style={{ color: '#C7B080' }} />, 
             title: "Financiamento Imobiliário",
             description: "Temos várias linhas de crédito para você comprar seu imóvel. Confira com nossos especialistas e encontre a melhor opção para o seu perfil."
         },
         {
-            icon: <FaKey style={{ color: '#E67E22' }} />,
+            icon: <FaKey style={{ color: '#C7B080' }} />,
             title: "Alugar uma casa",
             description: "Alugue uma linda casa para você e sua família, a melhor escolha para um lar aconchegante onde você pode construir memórias."
         },
         {
-            icon: <FaBuilding style={{ color: '#E67E22' }} />,
+            icon: <FaBuilding style={{ color: '#C7B080' }} />,
             title: "Compre uma casa",
             description: "Compre a casa perfeita por um ótimo preço. Qualidade premium garantida com as melhores opções para investimento."
         }
@@ -130,23 +130,22 @@ const Servicos: React.FC = () => {
                     <Typography 
                         variant="overline" 
                         component="span" 
-                        className="text-sm font-semibold tracking-wider font-poppins"
-                        sx={{ color: '#2C3E50', display: 'block', marginBottom: '0.75rem' }}
+                        className="text-sm font-semibold tracking-wider font-poppins text-re-base"
+                        sx={{ display: 'block', marginBottom: '0.75rem' }}
                     >
                         O QUE OFERECEMOS PARA VOCÊ
                     </Typography>
                     <Typography 
                         variant="h3" 
                         component="h2" 
-                        className="text-4xl font-bold mb-4 font-montserrat"
-                        sx={{ color: '#2C3E50' }}
+                        className="text-4xl font-bold mb-4 font-montserrat text-re-base"
                     >
                         Nossos serviços
                     </Typography>
                     <Typography 
                         variant="subtitle1" 
-                        className="max-w-2xl mx-auto font-poppins"
-                        sx={{ color: '#34495E', fontSize: '1.125rem', lineHeight: 1.6, textAlign: 'center' }}
+                        className="max-w-2xl mx-auto font-poppins text-re-text-main"
+                        sx={{ fontSize: '1.125rem', lineHeight: 1.6, textAlign: 'center' }}
                     >
                         A sua casa de sonho está aqui para ser a solução ideal para você e sua família
                     </Typography>
