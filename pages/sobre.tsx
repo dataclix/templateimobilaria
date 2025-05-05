@@ -344,7 +344,7 @@ const Sobre: React.FC = () => {
                         boxShadow: '0px 2px 5px rgba(0,0,0,0.03)'
                       }}
                     >
-                      <LocationOnIcon sx={{ color: 'var(--tw-color-re-accent, #00D54B)', mr: 2, fontSize: 28 }} />
+                      <LocationOnIcon sx={{ color: 'var(--tw-color-re-accent, #C7B080)', mr: 2, fontSize: 28 }} />
                       <Typography variant="body2" sx={{ color: 'var(--tw-color-re-text-main, #2D3F42)' }}>
                         <strong>Endereço:</strong> Avenida Tiradentes, 475 - Centro, São João del Rei - MG, CEP: 36307-330
                       </Typography>

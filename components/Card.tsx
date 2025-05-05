@@ -171,7 +171,7 @@ const Card: React.FC<ImovelResumo> = ({
             <div 
                 className="absolute inset-0 z-0 transition-opacity duration-300"
                 style={{
-                    background: isHovered ? 'linear-gradient(90deg, #2E2E2E 0%, #2E2E2E 85%, #C7B080 100%)' : 'none',
+                    background: isHovered ? 'linear-gradient(90deg, #C7B080 0%, #A69268 100%)' : 'none',
                     opacity: isHovered ? 0.85 : 0,
                     pointerEvents: 'none'
                 }}
